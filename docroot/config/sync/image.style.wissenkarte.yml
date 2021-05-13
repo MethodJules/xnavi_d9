@@ -1,0 +1,9 @@
+uuid: 1b49a0ac-ebff-4890-8ffb-043447607430
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zIuTt-ObthMAJnffNhmnsLds2wTI35WoynxLWLytPYg
+name: wissenkarte
+label: wissenkarte
+effects: {  }

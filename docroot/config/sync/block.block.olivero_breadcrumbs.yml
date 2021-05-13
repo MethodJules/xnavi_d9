@@ -1,0 +1,22 @@
+uuid: 40388470-f615-42c8-b267-ea2422fc64b1
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero
+_core:
+  default_config_hash: I4l6ogJszKQr1pGU_qGY09jgzdfqj2jrcRYOxzI5_ug
+id: olivero_breadcrumbs
+theme: olivero
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Pfadnavigation
+  provider: system
+  label_display: '0'
+visibility: {  }

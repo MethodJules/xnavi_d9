@@ -1,0 +1,20 @@
+uuid: f814f4a4-ab14-4605-9f06-65899882e2c0
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+_core:
+  default_config_hash: KnGwnFRGlFpbcvKM2qa9cqcTTOdKy4CF8kxsvDvs8pw
+name: Veranstaltung
+type: event
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

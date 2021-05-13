@@ -1,0 +1,22 @@
+uuid: 43a5f4e8-cfe9-4c7f-84f0-00951da063ba
+langcode: de
+status: true
+dependencies:
+  theme:
+    - claro
+_core:
+  default_config_hash: D_hUB_AW2IvKbVo3lVG-B2KfTsX6xJ-CxfOcRYUnL3E
+id: claro_secondary_local_tasks
+theme: claro
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Sekundäre Reiter'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

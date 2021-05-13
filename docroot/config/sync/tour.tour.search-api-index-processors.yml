@@ -1,0 +1,45 @@
+uuid: 948e025d-6e0e-41c7-823d-a88fc14affd5
+langcode: de
+status: true
+dependencies:
+  module:
+    - search_api
+_core:
+  default_config_hash: LqXAZO_yZPho3Pueh85e-NzQ3DmI5rNBf6_q8McKUqc
+id: search-api-index-processors
+label: 'Für diesen Index verwendete Prozessoren'
+module: search_api
+routes:
+  -
+    route_name: entity.search_api_index.processors
+tips:
+  search-api-index-processors-introduction:
+    id: search-api-index-processors-introduction
+    plugin: text
+    label: 'Für diesen Index verwendete Prozessoren'
+    body: 'Prozessoren passen bestimmte Aspekte der Funktionalität eines Index an. Sie können verhindern, dass Elemente indiziert werden, ändern, wie bestimmte Felder indiziert werden und Suchen beeinflussen.'
+    weight: 1
+  search-api-index-processors-enable:
+    id: search-api-index-processors-enable
+    plugin: text
+    label: 'Prozessoren aktivieren'
+    body: 'Listet alle für diesen Index verfügbaren Prozessoren auf und lässt Sie diejenigen auswählen, die aktiv sein sollten. (Hinweis: Einige Prozessoren können nicht deaktiviert werden.)'
+    weight: 2
+    attributes:
+      data-id: edit-status
+  search-api-index-processors-weights:
+    id: search-api-index-processors-weights
+    plugin: text
+    label: Prozessorreihenfolge
+    body: 'Zeigt Ihnen, welche aktivierten Prozessoren in den verschiedenen Teilen des Workflows zum Indizieren und Suchen verwendet werden und lässt Sie sie neu ordnen. Das sollte gewöhnlich nicht erforderlich sein und nur von erfahrenen Benutzern vorgenommen werden, da einige Prozessoren in der falschen Reihenfolge zu unerwarteten Ergebnissen führen können.'
+    weight: 3
+    attributes:
+      data-id: edit-weights
+  search-api-index-processors-settings:
+    id: search-api-index-processors-settings
+    plugin: text
+    label: Prozessoreinstellungen
+    body: 'Einige Prozessoren stellen zusätzliche Konfigurationen zur Verfügung. Diese Konfigurationen können hier angepasst werden.'
+    weight: 4
+    attributes:
+      data-class: form-type-vertical-tabs
