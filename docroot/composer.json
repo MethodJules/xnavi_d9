@@ -28,6 +28,7 @@
         "drupal/search_api": "^1.19",
         "drupal/search_api_solr": "^4.1",
         "drush/drush": "^10.4",
+        "geocoder-php/nominatim-provider": "^5.4",
         "squizlabs/php_codesniffer": "*"
     },
     "conflict": {
