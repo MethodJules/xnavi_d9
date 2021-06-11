@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 if [ -x "$(command -v docker)" ]; then
     echo "Docker is installed on your system. That's nice!!!"
     #create config directory
