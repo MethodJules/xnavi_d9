@@ -1,0 +1,28 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.portalsuche
+  module:
+    - system
+    - views
+  theme:
+    - zfdw_b4
+id: zfdw_b4_hervorgehobenesformularportalsuchepage_1
+theme: zfdw_b4
+region: sidebar_first
+weight: -14
+provider: null
+plugin: 'views_exposed_filter_block:portalsuche-page_1'
+settings:
+  id: 'views_exposed_filter_block:portalsuche-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /nachrichtenarchiv
+    negate: true
+    context_mapping: {  }

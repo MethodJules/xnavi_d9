@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies: {  }
+id: wissenskarte
+label: Wissenskarte
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -16,7 +16,7 @@ use Drupal\Core\Entity\EntityInterface;
 function xnavi_demo_tour_tips_alter(array &$tour_tips, EntityInterface $entity) {
   // Whitelist of tours for frontend and backend theme.
   $tourThemeMapping = [
-    'homepage' => ['olivero'],
+    'homepage' => ['zfdw_b4'],
   ];
 
   // Remove tours that are not whitelisted for provided themes.

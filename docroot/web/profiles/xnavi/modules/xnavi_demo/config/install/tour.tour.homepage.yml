@@ -19,7 +19,7 @@ tips:
     body: 'Das hier ist die Region für den Hauptinhalt'
     weight: 2
     attributes:
-      data-id: content
+      data-id: region-content
       data-options: 'tipLocation: left'
   main_menu:
     id: main_menu

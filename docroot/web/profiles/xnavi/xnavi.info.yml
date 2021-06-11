@@ -6,7 +6,7 @@ core_version_requirement: ^9
 distribution:
   name: x.Navi-Framework (Hofer et al. 2021)
   install:
-    theme: olivero
+    theme: zfdw_b4
     finish_url: /?tour=1
 
 install:
@@ -14,11 +14,13 @@ install:
   - drupal:block
   - drupal:breakpoint
   - drupal:contextual
+  - drupal:comment
   - drupal:menu_link_content
   - drupal:datetime
   - drupal:editor
   - drupal:image
   - drupal:inline_form_errors
+  - drupal:media
   - drupal:menu_ui
   - drupal:language
   - drupal:options
@@ -33,11 +35,16 @@ install:
   - drupal:file
   - drupal:responsive_image
   - drupal:views_ui
+  - drupal:help
   # contrib
   - leaflet:leaflet
   - devel:devel
+  - paragraphs:paragraphs
   - search_api:search_api
+  - search_api_db:search_api_db
   - search_api_solr:search_api_solr
+  - superfish:superfish
+  - better_exposed_filters:better_exposed_filters
   #xnavi
   - xnavi:meetup
 
@@ -45,3 +52,4 @@ themes:
   - seven
   - olivero
   - claro
+  - zfdw_b4

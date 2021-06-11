@@ -336,6 +336,15 @@ private static $installed = array (
         0 => '9.1.6',
       ),
     ),
+    'drupal/better_exposed_filters' => 
+    array (
+      'pretty_version' => '5.0.0-beta1',
+      'version' => '5.0.0.0-beta1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-5.0-beta1',
+    ),
     'drupal/big_pipe' => 
     array (
       'replaced' => 
@@ -363,6 +372,15 @@ private static $installed = array (
       array (
         0 => '9.1.6',
       ),
+    ),
+    'drupal/bootstrap4' => 
+    array (
+      'pretty_version' => '2.1.9',
+      'version' => '2.1.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.1.9',
     ),
     'drupal/breakpoint' => 
     array (
@@ -719,6 +737,24 @@ private static $installed = array (
         0 => '9.1.6',
       ),
     ),
+    'drupal/entity_reference_revisions' => 
+    array (
+      'pretty_version' => '1.9.0',
+      'version' => '1.9.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.9',
+    ),
+    'drupal/facets' => 
+    array (
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.8',
+    ),
     'drupal/field' => 
     array (
       'replaced' => 
@@ -820,6 +856,42 @@ private static $installed = array (
       array (
         0 => '9.1.6',
       ),
+    ),
+    'drupal/jquery_ui' => 
+    array (
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.4',
+    ),
+    'drupal/jquery_ui_datepicker' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
+    ),
+    'drupal/jquery_ui_slider' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.1',
+    ),
+    'drupal/jquery_ui_touch_punch' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1.0.0',
     ),
     'drupal/jsonapi' => 
     array (
@@ -963,6 +1035,15 @@ private static $installed = array (
         0 => '9.1.6',
       ),
     ),
+    'drupal/paragraphs' => 
+    array (
+      'pretty_version' => '1.12.0',
+      'version' => '1.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.12',
+    ),
     'drupal/path' => 
     array (
       'replaced' => 
@@ -1087,6 +1168,15 @@ private static $installed = array (
       array (
         0 => '9.1.6',
       ),
+    ),
+    'drupal/superfish' => 
+    array (
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.4',
     ),
     'drupal/syslog' => 
     array (
@@ -1213,6 +1303,31 @@ private static $installed = array (
       ),
       'reference' => '1ac108ba278ba0c2e71d2ce2ac4fac07ed6e8a29',
     ),
+    'geocoder-php/common-http' => 
+    array (
+      'pretty_version' => '4.4.0',
+      'version' => '4.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9f44a006d4b45d01dd31ea9b38ee7fb5724cd73e',
+    ),
+    'geocoder-php/nominatim-provider' => 
+    array (
+      'pretty_version' => '5.4.0',
+      'version' => '5.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '80f39ce41bcd0e4d9de3e83c40caf92d089fecf2',
+    ),
+    'geocoder-php/provider-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
     'grasmash/expander' => 
     array (
       'pretty_version' => '1.0.0',
@@ -1330,6 +1445,15 @@ private static $installed = array (
       ),
       'reference' => '9227822783c75406cfe400984b2f095cdf03d417',
     ),
+    'mehrpadin/superfish' => 
+    array (
+      'pretty_version' => '2.1',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '80a0a484b727e9fbe6b0ee609f80e10e5e158683',
+    ),
     'myclabs/php-enum' => 
     array (
       'pretty_version' => '1.8.0',
@@ -1413,6 +1537,15 @@ private static $installed = array (
       array (
         0 => '1.0',
       ),
+    ),
+    'php-http/discovery' => 
+    array (
+      'pretty_version' => '1.13.0',
+      'version' => '1.13.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '788f72d64c43dc361e7fcc7464c3d947c64984a7',
     ),
     'php-http/guzzle6-adapter' => 
     array (
