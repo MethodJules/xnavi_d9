@@ -2,12 +2,12 @@ langcode: de
 status: true
 dependencies:
   module:
-    - comment
+    - node
     - text
-id: comment.comment_body
-field_name: comment_body
-entity_type: comment
-type: text_long
+id: node.body
+field_name: body
+entity_type: node
+type: text_with_summary
 settings: {  }
 module: text
 locked: false

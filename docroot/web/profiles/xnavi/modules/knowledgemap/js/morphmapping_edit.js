@@ -4,7 +4,7 @@ $ = jQuery;
 var ViewMode = true;
 
 /* Don't show remove image button in edit mode.*/
-$('.image-widget-data').hide();
+$('#edit-field-wk-bild-0-remove-button').hide();
 Indeko.ImageMap.hideElements();
 
 // wait for images to be fully loaded

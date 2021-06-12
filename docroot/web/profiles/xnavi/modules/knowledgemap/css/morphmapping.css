@@ -189,7 +189,7 @@
   display: none;
 }
 
-#node-wissenskarte-form #edit-preview {
+#node-wissenskarte-edit-form #edit-preview {
   display: none;
 }
 
@@ -298,4 +298,10 @@
   text-overflow: ellipsis;
 }
 
+#edit-bef-sort-options {
+  display: none;
+}
 
+#edit-submit-search {
+  display: none;
+}

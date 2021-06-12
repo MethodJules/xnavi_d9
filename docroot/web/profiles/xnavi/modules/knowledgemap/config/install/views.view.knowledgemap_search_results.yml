@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - search_api.index.xnaviindex
+    - search_api.index.zfdwindex
   module:
     - search_api
 id: knowledgemap_search_results
@@ -10,7 +10,7 @@ label: 'Knowledgemap search results'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_xnaviindex
+base_table: search_api_index_zfdwindex
 base_field: search_api_id
 display:
   default:
@@ -66,7 +66,7 @@ display:
       fields:
         title:
           id: title
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: title
           relationship: none
           group_type: group
@@ -138,7 +138,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -186,7 +186,7 @@ display:
           plugin_id: search_api_fulltext
         type:
           id: type
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: type
           relationship: none
           group_type: group
@@ -258,7 +258,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:search_api.index.xnaviindex'
+        - 'config:search_api.index.zfdwindex'
   knowledgemap_search_results:
     display_plugin: block
     id: knowledgemap_search_results
@@ -275,4 +275,4 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
-        - 'config:search_api.index.xnaviindex'
+        - 'config:search_api.index.zfdwindex'

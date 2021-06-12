@@ -109,8 +109,8 @@ Indeko.AddForm = (function() {
 
       if (isElement(addedNode)) {
         //check if the user uploaded an image
-        if(addedNode.getElementsByClassName('image-style-wissenkarte').length > 0) {
-          var imageAdded = addedNode.getElementsByClassName('image-style-wissenkarte');
+        if(addedNode.getElementsByClassName('image-widget').length > 0) {
+          var imageAdded = addedNode.getElementsByClassName('image-widget');
 
           /*
            * If the image tag was added, attach a load function.
@@ -122,13 +122,13 @@ Indeko.AddForm = (function() {
            * This is no problem, because the onload function is attached two times,
            * but the image tag calls it only one time (when the image is loaded).
            */
-          imageAdded[0].onload = function () {
+          $(imageAdded).find('img')[0].onload = function () {
             imageAddedEvent();
           };
         }
         //check if the user clicked the "delete" button
-        else if($('#edit-field-wk-bild-und-0-upload', addedNode).length > 0 &&
-          $('#edit-field-wk-bild-und-0-upload-button', addedNode).length > 0) {
+        else if($('#edit-field-wk-bild-0-remove-button', addedNode).length > 0 &&
+          $('#edit-field-wk-bild-0-remove-button', addedNode).length > 0) {
           imageRemoved();
         }
       }

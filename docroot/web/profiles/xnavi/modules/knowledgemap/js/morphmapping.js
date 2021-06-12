@@ -34,7 +34,7 @@ var ValidationResult = function() {
  */
 Indeko.ImageMap = Indeko.ImageMap || {
 		scalingFactor: 1,
-		contentBlockLabel:	$('#block-zfdw-b4-hervorgehobenesformularportalsuchepage-1').find('h2'),
+		contentBlockLabel:	$('#block-hervorgehobenesformularsearchpage-1-wissenskarte').find('label[for=edit-search-api-fulltext]'),
 		elemTags: $('#edit-field-tag-combined-und'),
 		buttonSave: $('#edit-submit'),
 		elemTitle: $("#edit-title-0-value"),
@@ -51,14 +51,14 @@ Indeko.MorphBox = {
 	//element : $('#morphological-box'),
 	wholeSearchBox : $('.block-hervorgehobenesformularportalsuchepage-1-2'),
 	searchTypeBlock : $('.form-type-select'),
-	element : $('#block-zfdw-b4-hervorgehobenesformularportalsuchepage-1'),
-	selects : $('#block-morphsearch-morphsearch-block').find('select'),
+	element : $('#block-hervorgehobenesformularsearchpage-1-wissenskarte'),
+	selects : $('#views-exposed-form-search-page-1 .js-form-type-select').find('select'),
   searchJson : '',       // search blocks values before editing knowledge map
   elemFulltext: $('[data-drupal-selector=edit-search-api-fulltext]'),
   elemType: $('[data-drupal-selector=edit-type]'),
   elemInternalUrl: $('#edit-field-internal-reference-0-target-id'),
-  elemSidebar: $('.region-sidebar-first'),
-  elemBlockSearchresults: $('#block-zfdw-b4-views-block-knowledgemap-search-results'),
+  elemSidebar: $('.region--sidebar'),
+  elemBlockSearchresults: $('#block-views-block-knowledgemap-search-results'),
 };
 
 /**
@@ -74,6 +74,7 @@ function  initView(ViewMode) {
   if ($(Indeko.ImageMap.idImageMapCode).length > 0) {
     ViewMode = false;
     imageClassName = 'image-style-wissenkarte';
+    $('[data-drupal-selector=edit-field-wk-bild-0-preview]').addClass('image-style-wissenkarte');
   }
 
   if ($('.field--type-knowledgemap-field-type').length > 0) {
@@ -183,7 +184,7 @@ function instanciateAreaDescription(){
   guiArea.prepend('<div id="maparea-desciption"><textarea class="form-textarea form-control" id="img_description" name="img_description" cols="160" rows="1" placeholder="Beschreibung für gezeichneten Bereich"></textarea></div>');
   $('#img_description').keyup(Indeko.MorphBox.getSelectedValuesFromMorphBox);
 
-	guiArea.prepend('<span class="inline-block"><div id="addAreaButton" class="addAreaButton" value=""></div>' +
+	guiArea.prepend('<span class="inline-block"><div id="addAreaButton" class="addAreaButton" value="" ></div>' +
     				'<div id="button-hide" class="area-show">' + textHideAreas + '</div></span>');
 	guiArea.prepend('<label id="addAreaError" class="labelAreaErrorText" />');
 	guiArea.prepend('<div id="areadescription"></div>');
@@ -402,9 +403,9 @@ function gui_addArea(id) {
 	$('.img_active').hide();
 
 	var l_oSelect = $('<select name="img_shape" class="img_shape form-control">').appendTo(props[id]);
-	$('<option value="rect">' + Drupal.t("Rectangle") + '</option>').appendTo(l_oSelect);
-	$('<option value="circle">' + Drupal.t("Circle") + '</option>').appendTo(l_oSelect);
-	$('<option value="poly">' + Drupal.t("Polygon") + '</option>').appendTo(l_oSelect);
+	$('<option value="rect">' + "⬛" + '</option>').appendTo(l_oSelect);
+	$('<option value="circle">' + "⚫" + '</option>').appendTo(l_oSelect);
+	$('<option value="poly">' + "<i>⯂</i>" + '</option>').appendTo(l_oSelect);
 	l_oSelect.val("rect");
 	if (jQuery.chosen) {
     l_oSelect.chosen({disable_search: true}); // transform to chosen select box
@@ -829,24 +830,25 @@ Indeko.MorphBox.convertMorphsearch = function() {
   Indeko.MorphBox.reset();
   Indeko.MorphBox.element.addClass('knowledgemap');											// add class for knowledgemap block styling
   Indeko.ImageMap.contentBlockLabel.text(Drupal.t("Inhalt des Bereichs"));						// change label of the search block
-  Indeko.MorphBox.elemSidebar.find('.block:not(#block-zfdw-b4-hervorgehobenesformularportalsuchepage-1)').hide(); // hide others blocks in first sidebar
+  Indeko.MorphBox.elemSidebar.find('.block:not(#block-hervorgehobenesformularsearchpage-1-wissenskarte)').hide(); // hide others blocks in first sidebar
   $('.morphblocktable').remove();                                                 				// remove standard search block search / reset / save elements
   Indeko.MorphBox.selects.change(Indeko.MorphBox.getSelectedValuesFromMorphBox);  				// changelistener for comboboxes in MorpBox
   Indeko.MorphBox.searchTypeBlock.click(Indeko.MorphBox.getSelectedValuesFromMorphBox);			// clickevent for Inhaltstypen
   Indeko.MorphBox.elemFulltext.unbind().keyup(Indeko.MorphBox.getSelectedValuesFromMorphBox);  // keyuplistener for fulltext field
-
+  $('#views-exposed-form-search-page-1 .js-form-type-select').show();
 	// TODO direct url prototype
 	// add a textfield for map area direct links
-  Indeko.MorphBox.element.find('h2').append('<h2>' + Drupal.t('Direktlink') + '</h2>');
-	var htmlDirectUrl = '<div class="form-item form-type-textfield direct-url">' +
-		'<input type="text" id="direct-url" class="direct-url form-text form-control" value="" placeholder="' + Drupal.t('Add a link') + '"></div>' +
-		'<h2>' + Drupal.t("oder Portalsuche") + '</h2>';
+  Indeko.MorphBox.element.find('label:first').after('<h4>' + Drupal.t('Direktlink') + '</h4>');
+	var htmlDirectUrl = '<div class="form-type-textfield direct-url">' +
+		'<input type="text" id="direct-url" class="direct-url form-text form-element--type-text  form-control" value="" placeholder="' + Drupal.t('Add a link') + '"></div>'
+		 + '<h4>' + Drupal.t("oder Portalsuche") + '</h4>';
   Indeko.MorphBox.elemFulltext.before(htmlDirectUrl);
   Indeko.MorphBox.elemFulltext.attr('placeholder', Drupal.t('Add internal search'))
   $('#direct-url').keyup(Indeko.MorphBox.getSelectedValuesFromMorphBox);
+  Indeko.MorphBox.element.find('label[for=edit-type]').hide();
 
   // TODO internal url prototype
-  var elemInternalUrl = Indeko.MorphBox.elemInternalUrl;
+  /*var elemInternalUrl = Indeko.MorphBox.elemInternalUrl;
   if (elemInternalUrl.length > 0) {
     elemInternalUrl.detach();
     $('.form-type-textfield.direct-url').append(elemInternalUrl);
@@ -869,7 +871,7 @@ Indeko.MorphBox.convertMorphsearch = function() {
         });
       }
     };
-	}
+	}*/
 	Indeko.MorphBox.update(myimgmap.currentid);														// show selected morphological box items of current map area
 };
 
@@ -1076,7 +1078,7 @@ Indeko.ImageMap.hookMapAreas = function () {
         //Indeko.MorphBox.elemType.val(searchObject.type);
 
         const resultBlock = Indeko.MorphBox.elemBlockSearchresults;
-        resultBlock.find('[data-drupal-selector=edit-search-api-fulltext]').val(searchObject.fulltext);
+        resultBlock.find('[data-drupal-selector=edit-search-api-fulltext-results]').val(searchObject.fulltext);
         resultBlock.find('[data-drupal-selector=edit-type]').val(searchObject.type);
         resultBlock.find('[id^=edit-submit-knowledgemap-search-results]').click();
 
@@ -1137,6 +1139,8 @@ Indeko.ImageMap.addTooltip = function() {
     allowHTML: true,
     followCursor: 'initial',
     duration: [250,250],
+    delay: [500,0],
+    offset: [0,49]
   });
 
 };

@@ -11053,4 +11053,7 @@ li.pager__item {
 
 /*# sourceMappingURL=style.css.map */
 
-/* Installatio */
+/* Installation */
+.install-page > div > div > main > div.alert.alert-status.alert-success.alert-dismissible.fade.show {
+  display: none;
+}

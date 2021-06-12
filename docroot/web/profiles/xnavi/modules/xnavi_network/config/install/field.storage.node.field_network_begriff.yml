@@ -1,4 +1,4 @@
-langcode: de
+git statulangcode: de
 status: true
 dependencies:
   module:

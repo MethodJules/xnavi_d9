@@ -1,17 +1,17 @@
+uuid: 2cf5be76-1354-4a1a-963a-c6df86432f09
 langcode: de
 status: true
 dependencies:
   config:
-    - search_api.index.xnaviindex
+    - search_api.index.zfdwindex
   module:
-    - better_exposed_filters
     - search_api
 id: portalsuche
 label: portalsuche
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_xnaviindex
+base_table: search_api_index_zfdwindex
 base_field: search_api_id
 display:
   default:
@@ -24,7 +24,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: none
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -33,52 +33,15 @@ display:
           skip_access: false
           preserve_facet_query_args: false
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Suchen
-          reset_button: true
-          reset_button_label: Zurücksetzen
+          reset_button: false
+          reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
-          text_input_required_format: basic_html
-          bef:
-            general:
-              autosubmit: true
-              autosubmit_exclude_textfield: true
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: false
-              input_required: false
-              allow_secondary: true
-              secondary_label: 'Advanced options'
-              secondary_open: false
-            sort:
-              plugin_id: bef
-              advanced:
-                combine: true
-                combine_rewrite: "Titel Asc|A -> Z\r\nTitel Desc| Z -> A\r\nDatum Desc|Neueste zuerst\r\nDatum Asc|Älteste zuerst\r\nRelevanz Desc|Relevanz absteigend\r\nRelevanz Asc|Relevanz aufsteigend\r\n"
-                reset: false
-                reset_label: ''
-                collapsible: true
-                collapsible_label: Sortieroptionen
-                is_secondary: false
-            filter:
-              search_api_fulltext:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              type:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
       pager:
         type: full
         options:
@@ -112,7 +75,7 @@ display:
       fields:
         search_api_id:
           id: search_api_id
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: search_api_id
           relationship: none
           group_type: group
@@ -163,7 +126,7 @@ display:
           plugin_id: standard
         search_api_rendered_item:
           id: search_api_rendered_item
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: search_api_rendered_item
           relationship: none
           group_type: group
@@ -235,7 +198,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -262,8 +225,6 @@ display:
               administrator: '0'
               portalprojekt: '0'
             placeholder: ''
-            expose_fields: false
-            searched_fields_id: ''
           is_grouped: false
           group_info:
             label: ''
@@ -276,13 +237,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: direct
+          parse_mode: terms
           min_length: null
           fields: {  }
           plugin_id: search_api_fulltext
         type:
           id: type
-          table: search_api_index_xnaviindex
+          table: search_api_index_zfdwindex
           field: type
           relationship: none
           group_type: group
@@ -290,13 +251,17 @@ display:
           operator: or
           value:
             abschlussarbeit: abschlussarbeit
+            article: article
             biblio: biblio
             event: event
             fachbereich: fachbereich
             forschungsergebnis: forschungsergebnis
             institution: institution
             kooperationspartner: kooperationspartner
+            lehrveranstaltung: lehrveranstaltung
             news: news
+            ort: ort
+            page: page
             person: person
             projekt: projekt
             wissenskarte: wissenskarte
@@ -335,56 +300,8 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: search_api_options
-      sorts:
-        field_nachname:
-          id: field_nachname
-          table: search_api_index_xnaviindex
-          field: field_nachname
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: Name
-          plugin_id: search_api
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_xnaviindex
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: Relevanz
-          plugin_id: search_api
-        title:
-          id: title
-          table: search_api_index_xnaviindex
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Titel
-          plugin_id: search_api
-        created:
-          id: created
-          table: search_api_index_xnaviindex
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: Datum
-          plugin_id: search_api
-      title: 'Portal durchsuchen'
+      sorts: {  }
+      title: Portalsuche
       header: {  }
       footer: {  }
       empty:
@@ -404,16 +321,15 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.zfdwindex'
   page_1:
     display_plugin: page
     id: page_1
@@ -423,17 +339,12 @@ display:
       display_extenders: {  }
       path: portalsuche
       exposed_block: true
-      cache:
-        type: none
-        options: {  }
-      defaults:
-        cache: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
-      tags: {  }
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.zfdwindex'
