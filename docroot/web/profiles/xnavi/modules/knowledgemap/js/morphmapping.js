@@ -34,7 +34,7 @@ var ValidationResult = function() {
  */
 Indeko.ImageMap = Indeko.ImageMap || {
 		scalingFactor: 1,
-		contentBlockLabel:	$('#block-hervorgehobenesformularsearchpage-1-wissenskarte').find('label[for=edit-search-api-fulltext]'),
+		contentBlockLabel:	$('#block-zfdw-b4-hervorgehobenesformularportalsuchepage-1-wissenskarte').find('label[for=edit-search-api-fulltext]'),
 		elemTags: $('#edit-field-tag-combined-und'),
 		buttonSave: $('#edit-submit'),
 		elemTitle: $("#edit-title-0-value"),
@@ -49,16 +49,16 @@ Indeko.ImageMap = Indeko.ImageMap || {
 Indeko.MorphBox = {
 	// DOM element that contains the representation of the morphological box.
 	//element : $('#morphological-box'),
-	wholeSearchBox : $('.block-hervorgehobenesformularportalsuchepage-1-2'),
+	wholeSearchBox : $('#block-zfdw-b4-hervorgehobenesformularportalsuchepage-1'),
 	searchTypeBlock : $('.form-type-select'),
-	element : $('#block-hervorgehobenesformularsearchpage-1-wissenskarte'),
+	element : $('#block-zfdw-b4-hervorgehobenesformularportalsuchepage-1'),
 	selects : $('#views-exposed-form-search-page-1 .js-form-type-select').find('select'),
   searchJson : '',       // search blocks values before editing knowledge map
   elemFulltext: $('[data-drupal-selector=edit-search-api-fulltext]'),
   elemType: $('[data-drupal-selector=edit-type]'),
   elemInternalUrl: $('#edit-field-internal-reference-0-target-id'),
   elemSidebar: $('.region--sidebar'),
-  elemBlockSearchresults: $('#block-views-block-knowledgemap-search-results'),
+  elemBlockSearchresults: $('#block-zfdw-b4-views-block-knowledgemap-search-results'),
 };
 
 /**
@@ -136,7 +136,7 @@ function  initView(ViewMode) {
       //}
 
       Indeko.ImageMap.addTooltip();
-      $('map').imageMapResize();
+      //$('map').imageMapResize();
     }
   }
 
@@ -1078,7 +1078,7 @@ Indeko.ImageMap.hookMapAreas = function () {
         //Indeko.MorphBox.elemType.val(searchObject.type);
 
         const resultBlock = Indeko.MorphBox.elemBlockSearchresults;
-        resultBlock.find('[data-drupal-selector=edit-search-api-fulltext-results]').val(searchObject.fulltext);
+        resultBlock.find('[data-drupal-selector=edit-search-api-fulltext]').val(searchObject.fulltext);
         resultBlock.find('[data-drupal-selector=edit-type]').val(searchObject.type);
         resultBlock.find('[id^=edit-submit-knowledgemap-search-results]').click();
 
