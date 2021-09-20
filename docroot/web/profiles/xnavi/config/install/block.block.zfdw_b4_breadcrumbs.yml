@@ -3,8 +3,8 @@ status: false
 dependencies:
   module:
     - system
-  theme:
-    - zfdw_b4
+  #theme:
+  #  - zfdw_b4
 id: zfdw_b4_breadcrumbs
 theme: zfdw_b4
 region: breadcrumb

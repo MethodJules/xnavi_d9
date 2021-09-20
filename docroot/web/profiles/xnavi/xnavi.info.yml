@@ -49,7 +49,6 @@ install:
   - xnavi:meetup
 
 themes:
-  - seven
-  - olivero
-  - claro
   - zfdw_b4
+  - seven
+  - claro
