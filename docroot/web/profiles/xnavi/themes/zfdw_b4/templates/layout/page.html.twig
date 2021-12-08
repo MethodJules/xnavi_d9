@@ -94,7 +94,7 @@ set footer_classes = ' ' ~
 <div class="brand-border">
   <ul class="zsb-container">
     <li class="home"><a href="{{ base_path }}"><span class="sr-only">Zur Homepage</span><i class="fas fa-home" aria-hidden="true"></i></a></li>
-    <li class="first-brand onlyinst"><a href="{{ base_path }}">Zentrum für Digitalen Wandel / Center for Digital Change</a></li>
+    <li class="first-brand onlyinst"><a href="{{ base_path }}">{% if site_name %} {{site_name}} {% endif %}</a></li>
   </ul>
 </div>
 <header>

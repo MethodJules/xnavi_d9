@@ -15,3 +15,7 @@ function zfdw_b4_preprocess_node(&$variables) {
       ->generateFromRoute('<front>'));
   }
 }
+
+function zfdw_b4_preprocess_page(&$variables) {
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+}
