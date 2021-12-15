@@ -17,7 +17,7 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/address": "^1.9",
-        "drupal/better_exposed_filters": "^5.0@beta",
+        "drupal/better_exposed_filters": "^5.0",
         "drupal/bootstrap4": "^2.1",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
