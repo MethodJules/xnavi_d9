@@ -8,3 +8,7 @@ fontawesome:
   css:
     component:
       //use.fontawesome.com/releases/v5.15.1/css/all.css: {}
+tour-styling:
+  css:
+    theme:
+      css/theme/tour.theme.css: {}

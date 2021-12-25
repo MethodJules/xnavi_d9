@@ -9,6 +9,7 @@ stylesheets-remove:
 libraries:
   - zfdw_b4/global-styling
   - zfdw_b4/fontawesome
+  - zfdw_b4/tour-styling
 regions:
   banner: 'Top banner region'
   header: Header
