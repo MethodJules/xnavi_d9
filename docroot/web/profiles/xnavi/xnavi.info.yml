@@ -11,17 +11,26 @@ distribution:
 
 install:
   # core
+  - drupal:history
+  - drupal:block_content
   - drupal:block
   - drupal:breakpoint
   - drupal:contextual
   - drupal:comment
-  - drupal:menu_link_content
+  - drupal:color
+  - drupal:config
+  - drupal:comment
+  - drupal:contact
+  - drupal:ckeditor
   - drupal:datetime
   - drupal:editor
+  - drupal:help
   - drupal:image
   - drupal:inline_form_errors
+  - drupal:node
   - drupal:media
   - drupal:menu_ui
+  - drupal:menu_link_content
   - drupal:language
   - drupal:options
   - drupal:path
@@ -33,9 +42,11 @@ install:
   - drupal:tour
   - drupal:field_ui
   - drupal:file
+  - drupal:rdf
   - drupal:responsive_image
+  - druoal:views
   - drupal:views_ui
-  - drupal:help
+  - drupal:quickedit 
   # contrib
   - leaflet:leaflet
   - devel:devel
