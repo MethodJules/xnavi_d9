@@ -5,6 +5,8 @@ namespace Drupal\morphbox\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\Entity\Block;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Vocabulary;
 
 class MorphboxForm extends FormBase {
 
@@ -32,6 +34,13 @@ class MorphboxForm extends FormBase {
 
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
+        
+        $dimension = $form_state->getValue('text');
+        $this->_create_vocabulary($dimension);
+        // \Drupal::messenger()->addMessage('Dimenson @dimension installiert', ['@dimension' => $dimension]);
+        // TODO: Create Facets
+        
+        /*
         $facet = \Drupal\facets\Entity\Facet::create(
             [
                 'id' => 'content_type_facet',
@@ -53,7 +62,7 @@ class MorphboxForm extends FormBase {
         $facet->save();
 
         \Drupal::messenger()->addMessage('Facet installiert');
-        
+        */
 
         /*
         $block = Block::load('contenttypefacet');
@@ -63,5 +72,36 @@ class MorphboxForm extends FormBase {
         \Drupal::messenger()->addMessage('Block enabled');
 
         */
+    }
+
+    public function _create_term($term, $vocabulary, array $parent = []) {
+
+        // Create the taxonomy term.
+        $new_term = Term::create([
+          'name' => $term,
+          'vid' => $vocabulary,
+          'parent' => $parent,
+        ]);
+      
+        // Save the taxonomy term.
+        $new_term->save();
+      
+        // Return the taxonomy term id.
+        return $new_term->id();
+    }
+
+    public function _create_vocabulary($name) {
+        $vocabularies = Vocabulary::loadMultiple();
+        $machine_name = preg_replace('@[^a-z0-9-]+@','-', strtolower($name));
+        if(!isset($vocabularies[$machine_name])) {
+            $vocabulary = Vocabulary::create([
+                'vid' => $machine_name,
+                'description' => '',
+                'name' => $name,
+            ]);
+            $vocabulary->save();
+        } else {
+            // TODO: Do something here
+        }
     }
 }
