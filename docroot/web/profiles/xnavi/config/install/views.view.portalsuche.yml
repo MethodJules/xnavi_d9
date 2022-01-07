@@ -190,7 +190,7 @@ display:
               page: search_result
               paragraphed_content_demo: search_result
               person: search_result
-              projekt: search_result
+              project: search_result
               wissenskarte: search_result
               xnavi_network: search_result
           plugin_id: search_api_rendered_item
@@ -262,7 +262,7 @@ display:
             ort: ort
             page: page
             person: person
-            projekt: projekt
+            project: project
             wissenskarte: wissenskarte
             xnavi_network: xnavi_network
           group: 1

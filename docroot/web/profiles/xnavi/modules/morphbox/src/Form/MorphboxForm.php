@@ -17,11 +17,58 @@ class MorphboxForm extends FormBase {
 
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-        $form['morphbox']['text'] = [
+        global $base_url;
+        $form['#theme'] = 'morphboxform';
+        $form['#attached']['library'][] = 'morphbox/morphbox';
+        $form['#attached']['drupalSettings']['baseUrl'] = $base_url;
+
+
+        $form['morphbox']['dimension'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Dimension'),
             '#description' => $this->t('Bitte geben Sie hier den Dimensionsnamen ein'),
+            '#attributes' => [
+                'v-model' => 'table',
+                'v-if' => 'showDimensionInput'
+            ]
 
+        ];
+
+        $form['morphbox']['attribute'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Attribut'),
+            '#description' => $this->t('Bitte geben Sie hier den Attributsnamen ein'),
+            '#attributes' => [
+                'v-model' => 'attribute',
+                'v-if' => 'showAttributeInput'
+            ]
+
+        ];
+
+        $form['morphbox']['button_dimension_add'] = [
+            '#type' => 'button',
+            '#value' => $this->t('Add Dimension'),
+            '#attributes' => [
+                '@click' => 'buttonClick',
+                'v-if' => 'showDimensionInput'
+            ],
+        ];
+
+        $form['morphbox']['button_attribute_add'] = [
+            '#type' => 'button',
+            '#value' => $this->t('Add Attribute'),
+            '#attributes' => [
+                '@click' => 'saveAttribute'
+            ],
+        ];
+
+        $form['morphbox']['button_dimension_save'] = [
+            '#type' => 'button',
+            '#value' => $this->t('Save Dimension'),
+            '#attributes' => [
+                '@click' => 'saveDimension',
+                'v-if' => 'showDimensionSaveButton'
+            ],
         ];
 
         $form['morphbox']['submit'] = [

@@ -736,6 +736,24 @@
             'reference' => '8.x-1.35',
             'dev_requirement' => false,
         ),
+        'drupal/gin' => array(
+            'pretty_version' => '3.0.0-alpha37',
+            'version' => '3.0.0.0-alpha37',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../web/themes/contrib/gin',
+            'aliases' => array(),
+            'reference' => '8.x-3.0-alpha37',
+            'dev_requirement' => false,
+        ),
+        'drupal/gin_toolbar' => array(
+            'pretty_version' => '1.0.0-beta20',
+            'version' => '1.0.0.0-beta20',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/gin_toolbar',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta20',
+            'dev_requirement' => false,
+        ),
         'drupal/hal' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -831,6 +849,15 @@
             'replaced' => array(
                 0 => '9.3.0',
             ),
+        ),
+        'drupal/layout_paragraphs' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/layout_paragraphs',
+            'aliases' => array(),
+            'reference' => '1.0.0',
+            'dev_requirement' => false,
         ),
         'drupal/leaflet' => array(
             'pretty_version' => '2.1.16',
