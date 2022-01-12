@@ -34,10 +34,15 @@ tips:
     body: Hier können administrative Aufgaben geregelt werden.
     weight: "4"
     selector: .toolbar-icon-system-admin-content
+  user_management:
+    id: user_management
+    plugin: text
+    body: Um Benutzer anzulegen klicken Sie auf <a href="/admin/people?tour=1&tips=add-user" class="button button--primary">Benutzer</a>
+    weight: "5"
   restart_tour:
     id: restart_tour
     plugin: text
     label: Brauchen Sie ein bisschen Zeit, um rumzuschauen?
     body: Sie können die Tour zu jeder Zeit stoppen und neu starten indem Sie diesen Button klicken.
-    weight: "5"
+    weight: "6"
   

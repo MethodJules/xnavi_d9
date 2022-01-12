@@ -19,3 +19,9 @@ function zfdw_b4_preprocess_node(&$variables) {
 function zfdw_b4_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 }
+
+function zfdw_b4_preprocess_paragraph__card_deck(&$variables) {
+  // Add .card-deck class
+  // https://getbootstrap.com/docs/4.4/components/card/
+  $variables['attributes']['class'] = ['card-deck', 'irgendeineklasse'];
+}

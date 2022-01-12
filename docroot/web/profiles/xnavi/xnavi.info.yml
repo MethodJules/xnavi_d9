@@ -24,11 +24,13 @@ install:
   - drupal:ckeditor
   - drupal:datetime
   - drupal:editor
+  - drupal:forum
   - drupal:help
   - drupal:image
   - drupal:inline_form_errors
   - drupal:node
   - drupal:media
+  - drupal:media_library
   - drupal:menu_ui
   - drupal:menu_link_content
   - drupal:language
@@ -56,6 +58,7 @@ install:
   - search_api_solr:search_api_solr
   - superfish:superfish
   - better_exposed_filters:better_exposed_filters
+  - gin_toolbar:gin_toolbar
   #xnavi
   - xnavi:meetup
 
@@ -63,3 +66,4 @@ themes:
   - zfdw_b4
   - seven
   - claro
+  - gin
