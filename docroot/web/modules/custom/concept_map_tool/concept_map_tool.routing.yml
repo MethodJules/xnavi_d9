@@ -1,0 +1,7 @@
+concept_map_tool.example:
+  path: '/concept-map-tool/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\concept_map_tool\Controller\ConceptMapToolController::build'
+  requirements:
+    _permission: 'access content'

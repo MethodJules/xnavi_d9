@@ -1,0 +1,6 @@
+name: Concept Map Tool
+type: module
+description: This module provides an interactive tool to create concept maps
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
