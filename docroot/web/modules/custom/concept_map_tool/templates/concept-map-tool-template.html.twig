@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display something.
+ *
+ * Available variables:
+ * - foo: Foo variable description.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="wrapper-class">
+  {{ foo }}
+  {% verbatim %}
+  <div id="concept-map-tool">
+    <todo-item></todo-item>
+    <d3-network ref='net' :net-nodes="nodes" :net-links="links" :options="options" />
+     <div class="markers">
+      <svg>
+        <defs>
+          <marker
+            id="m-end"
+            markerWidth="10"
+            markerHeight="7"
+            refX="14"
+            refY="3.5"
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
+            <polygon points="0 0, 10 3.5, 0 7" fill="red" />
+          </marker>
+          <marker
+            id="m-start"
+            markerWidth="10"
+            markerHeight="7"
+            refX="-5"
+            refY="3.5"
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
+            <polygon points="10 0, 10 7, 0 3.5" fill="red" />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  </div>
+  {% endverbatim %}
+</div>

@@ -1,0 +1,10 @@
+entity.seminar_work.settings:
+  title: Seminar Work
+  description: Configure a Seminar Work entity type
+  route_name:  entity.seminar_work.settings
+  parent: system.admin_structure
+entity.seminar_work.collection:
+  title: Seminar Works
+  description: List of seminar works
+  route_name: entity.seminar_work.collection
+  parent: system.admin_content

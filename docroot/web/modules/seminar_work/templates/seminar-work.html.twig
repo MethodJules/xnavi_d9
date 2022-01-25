@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a seminar work entity.
+ *
+ * This template is used when viewing a registered seminar work's page,
+ * e.g., /admin/content/seminar-work)/123. 123 being the seminar work's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.title'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_seminar_work()
+ */
+#}
+<article{{ attributes }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>

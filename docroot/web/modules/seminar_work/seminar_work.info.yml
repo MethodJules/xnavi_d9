@@ -1,0 +1,9 @@
+name: Seminar Work
+type: module
+description: 'Provides a seminar work entity.'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:text
+configure: entity.seminar_work.settings

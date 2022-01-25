@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+
+/**
+* Implements hook_entity_field_access().
+*/
+
+function access_management_entity_field_access($operation, \Drupal\Core\Field\FieldDefinitionInterface $field_definition, \Drupal\Core\Session\AccountInterface $account, \Drupal\Core\Field\FieldItemListInterface $items = NULL) {
+
+    /*
+        if ($field_definition->getName() == 'field_of_interest' && $operation == 'edit') {
+            return AccessResult::allowedIfHasPermission($account, 'update field of interest');
+        }
+        return AccessResult::neutral();
+    */
+    $dididid = 2;
+    if($field_definition->getName() == 'field_first_name' && 'operation' == 'view') {
+        $result =  AccessResult::allowedIfHasPermission($account, 'community');
+        return $result;
+    }
+    return AccessResult::neutral();
+}

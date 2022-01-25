@@ -1,0 +1,22 @@
+entity.seminar_work.settings:
+  title: Settings
+  route_name: entity.seminar_work.settings
+  base_route: entity.seminar_work.settings
+entity.seminar_work.view:
+  title: View
+  route_name: entity.seminar_work.canonical
+  base_route: entity.seminar_work.canonical
+entity.seminar_work.edit_form:
+  title: Edit
+  route_name: entity.seminar_work.edit_form
+  base_route: entity.seminar_work.canonical
+entity.seminar_work.delete_form:
+  title: Delete
+  route_name: entity.seminar_work.delete_form
+  base_route: entity.seminar_work.canonical
+  weight: 10
+entity.seminar_work.collection:
+  title: Seminar Work
+  route_name: entity.seminar_work.collection
+  base_route: system.admin_content
+  weight: 10

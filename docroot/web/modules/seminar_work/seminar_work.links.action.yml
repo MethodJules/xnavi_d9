@@ -1,0 +1,5 @@
+seminar_work.add_form:
+  route_name: entity.seminar_work.add_form
+  title: 'Add seminar work'
+  appears_on:
+    - entity.seminar_work.collection

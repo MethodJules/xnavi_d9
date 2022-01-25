@@ -12,6 +12,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -34,9 +38,12 @@
         "drupal/paragraphs": "^1.12",
         "drupal/search_api": "^1.19",
         "drupal/search_api_solr": "^4.1",
+        "drupal/smtp": "^1.0",
         "drupal/superfish": "^1.4",
+        "drupal/swiftmailer": "^2.2",
         "drush/drush": "^10.4",
         "geocoder-php/nominatim-provider": "^5.4",
+        "npm-asset/vue-d3-network": "^0.1.28",
         "squizlabs/php_codesniffer": "*"
     },
     "conflict": {

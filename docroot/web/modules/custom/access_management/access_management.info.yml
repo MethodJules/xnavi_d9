@@ -1,0 +1,6 @@
+name: x.Navi Access Management
+description: Das Modul legt berechtigungen an
+core: 8.x
+type: module
+core_version_requirement: ^8 || ^9
+package: x.Navi Optional

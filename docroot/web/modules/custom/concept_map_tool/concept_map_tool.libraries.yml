@@ -8,6 +8,8 @@ concept_map_tool:
   dependencies:
     - core/drupalSettings
     - concept_map_tool/jquery-labelauty
+    - concept_map_tool/vuejs
+    - concept_map_tool/vued3network
 
 # Third-party library (self hosted).
 jquery-labelauty:
@@ -35,3 +37,14 @@ vuejs:
     gpl-compatible: true
   js:
     https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js: {type: external, minified: true}
+
+# Vue d3 network
+vued3network:
+  remote: https://github.com/emiliorizzo/vue-d3-network/
+  version: 0.1.28
+  license: 
+    name: MIT
+    url: https://www.jsdelivr.com/package/npm/vue-d3-network
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/npm/vue-d3-network@0.1.28/dist/vue-d3-network.umd.min.js: {type: external, minified: true}

@@ -15,8 +15,13 @@ class ConceptMapToolController extends ControllerBase {
   public function build() {
 
     $build['content'] = [
-      '#type' => 'item',
-      '#markup' => $this->t('It works!'),
+      '#theme' => 'concept_map_tool_template',
+      '#foo' => $this->t('It workssiduhisudiu'),
+      '#attached' => [
+        'library' => [
+          'concept_map_tool/concept_map_tool'
+        ]
+      ]
     ];
 
     return $build;

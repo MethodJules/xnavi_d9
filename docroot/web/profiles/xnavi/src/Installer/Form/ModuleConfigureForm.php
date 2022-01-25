@@ -184,7 +184,6 @@ class ModuleConfigureForm extends FormBase {
       $form['install_modules'][$id]['info'] = [
         '#type' => 'container',
         '#attributes' => ['class' => ['module-info']],
-        '#suffix' => '<span class="badge badge-pill badge-danger">Experimtal</span>'
       ];
 
       $form['install_modules'][$id]['info']['description'] = [

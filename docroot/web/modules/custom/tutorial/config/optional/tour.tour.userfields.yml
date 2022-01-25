@@ -1,0 +1,19 @@
+id: userfields
+module: tutorial
+langcode: de
+routes:
+  - route_name: entity.entity_form_display.user.default
+tips:
+  introduction:
+    id: userdisplay
+    plugin: text
+    label: User Display
+    body: Hi this is a test
+    weight: "1"
+  user-fields:
+    id: user-fields
+    plugin: text
+    label: User fields
+    body: Her you can edit if a special user field should be displayed. For exmaple move 'Vorname' up to 'Feld'.
+    weight: "2"
+    selector: "#field-first-name"

@@ -1,0 +1,13 @@
+acess_management.content:
+    path: '/am/content'
+    defaults:
+        _controller: 'Drupal\access_management\Controller\AccessManagementController::content'
+    requirements:
+        _permission: 'access content'
+
+acess_management.form:
+    path: '/am/form'
+    defaults:
+        _form: 'Drupal\access_management\Form\AccessManagementForm'
+    requirements:
+        _permission: 'access content'

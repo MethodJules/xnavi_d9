@@ -1,0 +1,5 @@
+administer seminar work:
+  title: 'Administer seminar work settings'
+  restrict access: true
+access seminar work overview:
+  title: 'Access seminar work overview page'

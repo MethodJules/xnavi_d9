@@ -1,0 +1,7 @@
+entity.seminar_work.settings:
+  path: 'admin/structure/seminar-work'
+  defaults:
+    _form: '\Drupal\seminar_work\Form\SeminarWorkSettingsForm'
+    _title: 'Seminar Work'
+  requirements:
+    _permission: 'administer seminar work'

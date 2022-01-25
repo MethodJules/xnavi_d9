@@ -1,0 +1,101 @@
+.map-enter {
+    opacity: 0;
+  }
+  .map-enter-active {
+    transition: opacity 0.3s ease-out;
+  }
+  .map-leave-active {
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+  }
+  .emptyMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .emptyMap .card {
+    border: 1px solid red;
+    padding: 4rem;
+    font-size: 2rem;
+  }
+  .emptyMap .card:hover {
+    cursor: pointer;
+  }
+  .markers {
+    height: 0px;
+  }
+  button {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .modal-title {
+    border-bottom: 1px solid grey;
+  }
+  .modal-body {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .modal-body p {
+    display: flex;
+    justify-content: space-between;
+  }
+  .modal-body select {
+    margin-bottom: 1rem;
+  }
+  .modal-body label {
+    margin-bottom: 0.5rem;
+  }
+  .modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .modal-buttons * {
+    margin: 0.2rem 0.3rem;
+  }
+  #add-first-concept-modal span {
+    margin-left: 0.5rem;
+  }
+  .link-label {
+    fill: purple;
+    transform: translate(0, 0.5em);
+    font-size: 0.8em;
+  }
+  .net {
+    /* width: 100%; */
+    min-height: 70vh !important;
+    padding: 0;
+  }
+  #m-end path,
+  #m-start {
+    fill: rgba(18, 120, 98, 0.8);
+  }
+  .link-label {
+    fill: black !important;
+    text-shadow: 2px 2px 2px white;
+    transform: translate(0, 0.5em) !important;
+    font-size: 0.8 em !important;
+  }
+  /* ::v-deep .links,
+  ::v-deep .nodes,
+  ::v-deep .labels {
+    margin-top: 100px !important;
+  }
+  ::v-deep .net-svg {
+    padding: 0 !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  } */

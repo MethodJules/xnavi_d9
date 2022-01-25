@@ -1,0 +1,20 @@
+id: user-management
+module: tutorial
+langcode: de
+routes:
+  - route_name: entity.user.collection
+  - route_name: view.user_admin_people.page_1
+tips:
+  introduction:
+    id: introduction
+    plugin: text
+    label: Tests
+    body: Hi this is a test
+    weight: "1"
+  user-fields:
+    id: user-fields
+    plugin: text
+    label: User fields
+    body: Here you can display user fields and <a href="/admin/config/people/accounts/form-display" class="button button--primary">edit</a> them
+    weight: "2"
+    selector: "#block-claro-local-actions"
