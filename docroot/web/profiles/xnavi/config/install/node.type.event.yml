@@ -10,7 +10,7 @@ third_party_settings:
     parent: 'main-menu:0:'
 name: Veranstaltung
 type: event
-description: ''
+description: 'Dieser Typ legt Events an'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -29,6 +29,7 @@
         "drupal/default_content": "@alpha",
         "drupal/devel": "^4.1",
         "drupal/facets": "^1.8",
+        "drupal/fullcalendar_view": "^5.1",
         "drupal/geocoder": "^3.20",
         "drupal/geofield": "^1.22",
         "drupal/gin": "@alpha",

@@ -3,7 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_zeit
+    - field.field.node.event.field_e
+    - field.field.node.event.field_st
     - node.type.event
   module:
     - datetime
@@ -30,8 +31,26 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     region: content
-  links:
+  field_e:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
     weight: 3
+    region: content
+  field_st:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: { }
+    weight: 2
+    region: content
+  links:
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

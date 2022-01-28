@@ -1,15 +1,15 @@
-langcode: und
+langcode: de
 status: true
 dependencies:
   module:
     - datetime
     - node
-id: node.field_zeit
-field_name: field_zeit
+id: node.field_st
+field_name: field_st
 entity_type: node
 type: datetime
 settings:
-  datetime_type: datetime
+  datetime_type: date
 module: datetime
 locked: false
 cardinality: 1

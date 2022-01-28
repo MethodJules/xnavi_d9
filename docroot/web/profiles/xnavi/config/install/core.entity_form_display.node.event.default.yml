@@ -3,7 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
-    - field.field.node.event.field_zeit
+    - field.field.node.event.field_e
+    - field.field.node.event.field_st
     - node.type.event
   module:
     - datetime
@@ -30,12 +31,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_zeit:
-    weight: 2
+  field_e:
+    weight: 3
     type: datetime_default
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_st:
+    weight: 2
+    type: datetime_default
     region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 5

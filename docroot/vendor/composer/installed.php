@@ -718,6 +718,15 @@
                 0 => '9.3.0',
             ),
         ),
+        'drupal/fullcalendar_view' => array(
+            'pretty_version' => '5.1.2',
+            'version' => '5.1.2.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/fullcalendar_view',
+            'aliases' => array(),
+            'reference' => '5.1.2',
+            'dev_requirement' => false,
+        ),
         'drupal/geocoder' => array(
             'pretty_version' => '3.24.0',
             'version' => '3.24.0.0',

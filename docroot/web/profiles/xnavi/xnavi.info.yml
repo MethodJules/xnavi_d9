@@ -61,6 +61,7 @@ install:
   - superfish:superfish
   - better_exposed_filters:better_exposed_filters
   - gin_toolbar:gin_toolbar
+  - fullcalendar_view:fullcalendar_view
   #xnavi
   - xnavi:meetup
 

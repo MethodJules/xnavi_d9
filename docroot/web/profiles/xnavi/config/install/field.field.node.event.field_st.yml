@@ -2,16 +2,16 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_zeit
+    - field.storage.node.field_st
     - node.type.event
   module:
     - datetime
-id: node.event.field_zeit
-field_name: field_zeit
+id: node.event.field_st
+field_name: field_st
 entity_type: node
 bundle: event
-label: Zeitraum
-description: 'Bitte geben Sie hier den Zeitraum ein.'
+label: 'Startdatum'
+description: ''
 required: false
 translatable: false
 default_value: {  }
