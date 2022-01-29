@@ -1,0 +1,171 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+* Implements hook_schema().
+*/
+
+function news_schema() {
+
+
+    $schema['activities'] = [
+        'description' => 'The table for the activities',
+        'fields' => [
+            'activities_id' => [
+                'description' => 'The primary identifier for activities.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'nid' => [
+                'description' => 'The node id',
+                'type' => 'int',
+                'not null' => FALSE,
+                'sortable' => TRUE,
+                'views' => TRUE,
+                'not null' => TRUE,
+            ],
+            'content_type' => [
+                'description' => 'The content type',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+        ],
+
+        'primary key' => ['activities_id'],
+    ];
+
+    $schema['newsletter_order'] = [
+        'description' => 'The table to save newsletter orders',
+        'fields' => [
+            'newsletter_order_id' => [
+                'description' => 'The primary identifier for newsletter order.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'email' => [
+                'description' => 'The E-Mail-Address from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'salutation' => [
+                'description' => 'The salutation from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'default' => '',
+            ],
+            'firstname' => [
+                'description' => 'The first name from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'default' => '',
+            ],
+            'surname' => [
+                'description' => 'The surname from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'default' => '',
+            ],
+            'company' => [
+                'description' => 'The company from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'default' => '',
+            ],
+            'branch' => [
+                'description' => 'The branch from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'default' => '',
+            ],
+            'types' => [
+                'description' => 'The branch from the orderer',
+                'type' => 'varchar',
+                'length' => 1024,
+                'default' => '',
+            ],
+            'token' => [
+                'description' => 'The generated random token from the orderer',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'confirmation_flag' => [
+                    'description' => 'The confirmation flag 1=confirmed, 0=not confirmed',
+                    'type' => 'int',
+                    'not null' => TRUE,
+            ],
+            'interval' => [
+                'description' => 'The newsletter interval in weeks',
+                'type' => 'int'
+            ],
+            'last_activity' => [
+                'description' => 'The last activity id that was send in the last newsletter',
+                'type' => 'int'
+            ],
+        ],
+        'primary key' => ['newsletter_order_id']
+    ];
+
+    $schema['newsletter_log'] = [
+        'description' => 'The table for logging send newsletters',
+        'fields' => [
+            'newsletter_log_id' => [
+                'description' => 'The primary identifier for newsletter logs',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'date' => [
+                'description' => 'The date when the newsletter was send',
+                'type' => 'varchar',
+                'mysql_type' => 'datetime',
+            ],
+            'last_activity' => [
+                'description' => 'The last activity id that was send in the last newsletter',
+                'type' => 'int'
+            ],
+        ],
+        'primary key' => ['newsletter_log_id'],
+    ];
+
+    return $schema;
+}
+
+/**
+ * Updates the database table newsletter_order.
+ * Adds interval and last_activity fields.
+ */
+function news_update_8001() {
+
+  $spec = [
+    'type' => 'varchar',
+    'description' => "New Col",
+    'length' => 20,
+    'not null' => FALSE,
+  ];
+
+  $fieldInterval = [
+    'description' => 'The newsletter interval in weeks',
+    'type' => 'int',
+    'default' => 1,
+
+  ];
+
+  $fieldLastActivity = [
+    'description' => 'The last activity id that was send in the last newsletter',
+    'type' => 'int',
+    'default' => 0,
+  ];
+
+  $schema = Database::getConnection()->schema();
+  $schema->addField('newsletter_order', 'interval', $fieldInterval);
+  $schema->addField('newsletter_order', 'last_activity', $fieldLastActivity);
+}
