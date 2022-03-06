@@ -5,7 +5,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>News.Navi</title>
   <style>
-    <style>
     /* -------------------------------------
         INLINED WITH htmlemail.io/inline
     ------------------------------------- */
@@ -119,12 +118,17 @@
             <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;">
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
-                  {# <td><img src="{{message.base_path}}/themes/custom/zfdw_b4/images/zfdw_logo.png" style="width: 50%; height: 100px"/></td> #}
+                  <td>
+                    {# <img src="{{message.base_url}}/themes/custom/zfdw_b4/images/zfdw_logo.png" alt="Logo ZfDW" title="Logo ZfDW" style="width: auto; height: 100px; margin-bottom: 2em; float: left"/> #}
+                    {# <img src="{{message.base_url}}/themes/custom/zfdw_b4/images/logo-uni.svgz.svg" alt="Logo Universität Hildesheim" title="Logo Universität Hildesheim" style="width: auto; height: 100px; margin-bottom: 2em; float: right"/> #}
+                  </td>
                 <tr>
                   <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
 
                     <p style="font-family: sans-serif; font-size: 15px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{ message.name_recipient|striptags }},</p>
-                    <p style="font-family: sans-serif; font-size: 15px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{ body|striptags }}</p>
+                    <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{ message.greeting|raw}}</p>
+                    <p style="font-family: sans-serif; font-size: 15px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{ body}}</p>
+
                     <p style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin: 0; Margin-bottom: 15px;">{{ message.bold_text }}</p>
                    
                     
@@ -141,21 +145,22 @@
                                 <td style="font-family: sans-serif; font-size: 15px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="{{message.base_path}}{{ message.cta_url }}" target="_blank" style="display: inline-block; color: #ffffff; background-color: #0099be; border: solid 1px #0099be; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #0099be;">{{message.cta_text}}</a></td>
                               </tr>
                               {% endif %}
-                              {% for news_item in message.news_items %}
-                                {% if news_item.type == 'event' %}
+                              {% for news_type in message.news_items %}
+                                {% if news_type.news_items %}
+                                    <tr style="font-weight: bold;">
+                                      <td style="padding-top: 2em;">{{news_type.name}}</td>
+                                    </tr>
+                                  {% for news_item in news_type.news_items %}
                                     <tr>
-                                      <td>{{news_item.title}} findet am {{news_item.date}} statt.</td>
+                                    </tr> 
+                                    <tr>
+                                      <td>{{news_item.title}}</td>
                                       <td style="font-family: sans-serif; font-size: 15px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="{{ message.base_path }}node/{{ news_item.nid }}" target="_blank" style="display: inline-block; color: #ffffff; background-color: #0099be; border: solid 1px #0099be; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #0099be;">Mehr erfahren</a></td>
                                     </tr>
-                                {% else %}
-                                  <tr>
-                                  </tr> 
-                                  <tr>
-                                    <td>{{news_item.type}} {{news_item.title}} wurde angelegt </td>
-                                    <td style="font-family: sans-serif; font-size: 15px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="{{ message.base_path }}node/{{ news_item.nid }}" target="_blank" style="display: inline-block; color: #ffffff; background-color: #0099be; border: solid 1px #0099be; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #0099be;">Mehr erfahren</a></td>
-                                  </tr>
+                                  {% endfor %}
                                 {% endif %}
-                              {% endfor %}
+                             {% endfor %}
+
                             </tbody>
                           </table>
                         </td>
@@ -163,7 +168,7 @@
                       </tbody>
                     </table>
                     {% if message.lower_body %}
-                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{ message.lower_body }}</p>
+                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{ message.lower_body|raw }}</p>
                     {% endif %}
                   </td>
                 </tr>
