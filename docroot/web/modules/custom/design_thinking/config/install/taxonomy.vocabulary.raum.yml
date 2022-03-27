@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+name: Raum
+vid: raum
+description: ''
+weight: 0
