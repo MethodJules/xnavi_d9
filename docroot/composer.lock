@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34aca94b71bbd8f5daeae9f99e03fcfa",
+    "content-hash": "3e6bff2be445f8ff3c106ebeca3e0fb8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2080,6 +2080,67 @@
             }
         },
         {
+            "name": "drupal/alexa",
+            "version": "1.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/alexa.git",
+                "reference": "8.x-1.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/alexa-8.x-1.0-rc2.zip",
+                "reference": "8.x-1.0-rc2",
+                "shasum": "5aa2ad1fabbd10c7c8ee75d1fa0955083b08ed05"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "jakubsuchy/amazon-alexa-php": "dev-master"
+            },
+            "require-dev": {
+                "drupal/chatbot_api": "^2.0.0-rc0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-rc2",
+                    "datestamp": "1600089789",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "gambry",
+                    "homepage": "https://www.drupal.org/user/400462"
+                },
+                {
+                    "name": "hampercm",
+                    "homepage": "https://www.drupal.org/user/2439110"
+                },
+                {
+                    "name": "meba",
+                    "homepage": "https://www.drupal.org/user/31977"
+                }
+            ],
+            "description": "An endpoint to receive Amazon Alexa callbacks",
+            "homepage": "https://www.drupal.org/project/alexa",
+            "keywords": [
+                "Alexa",
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/alexa",
+                "issues": "http://drupal.org/project/issues/alexa"
+            }
+        },
+        {
             "name": "drupal/better_exposed_filters",
             "version": "5.0.0",
             "source": {
@@ -2196,6 +2257,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap4",
                 "issues": "https://www.drupal.org/project/issues/bootstrap4"
+            }
+        },
+        {
+            "name": "drupal/chatbot_api",
+            "version": "2.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/chatbot_api.git",
+                "reference": "8.x-2.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/chatbot_api-8.x-2.0-rc2.zip",
+                "reference": "8.x-2.0-rc2",
+                "shasum": "1278613341a270f2b808f23558427da8dc8ff3a1"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-rc2",
+                    "datestamp": "1600091022",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "gambry",
+                    "homepage": "https://www.drupal.org/user/400462"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "API for chatbot and Personal Assistant",
+            "homepage": "https://www.drupal.org/project/chatbot_api",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/chatbot_api",
+                "issues": "https://www.drupal.org/project/issues/chatbot_api"
             }
         },
         {
@@ -3800,6 +3913,62 @@
             }
         },
         {
+            "name": "drupal/restui",
+            "version": "1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/restui.git",
+                "reference": "8.x-1.20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.20.zip",
+                "reference": "8.x-1.20",
+                "shasum": "df1d3c486ee0e7b4e9a24e6523a69c9efe73caff"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.20",
+                    "datestamp": "1616839543",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "-enzo-",
+                    "homepage": "https://www.drupal.org/user/294937"
+                },
+                {
+                    "name": "clemens.tolboom",
+                    "homepage": "https://www.drupal.org/user/125814"
+                },
+                {
+                    "name": "juampynr",
+                    "homepage": "https://www.drupal.org/user/682736"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                }
+            ],
+            "description": "Provides a user interface to manage REST resources.",
+            "homepage": "https://www.drupal.org/project/restui",
+            "support": {
+                "source": "https://git.drupalcode.org/project/restui"
+            }
+        },
+        {
             "name": "drupal/search_api",
             "version": "1.21.0",
             "source": {
@@ -4976,6 +5145,58 @@
                 "source": "https://github.com/mtibben/html2text/tree/4.3.1"
             },
             "time": "2020-04-16T23:44:31+00:00"
+        },
+        {
+            "name": "jakubsuchy/amazon-alexa-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jakubsuchy/amazon-alexa-php.git",
+                "reference": "27abfadbb51586e8dcac372f981b49e9b973d0df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jakubsuchy/amazon-alexa-php/zipball/27abfadbb51586e8dcac372f981b49e9b973d0df",
+                "reference": "27abfadbb51586e8dcac372f981b49e9b973d0df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alexa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathias Hansen",
+                    "email": "me@codemonkey.io"
+                },
+                {
+                    "name": "Emanuele Corradini",
+                    "email": "korra88@gmail.com"
+                },
+                {
+                    "name": "Jakub Suchy",
+                    "email": "info@jsuchy.cz"
+                }
+            ],
+            "description": "Amazon Alexa interface for PHP",
+            "support": {
+                "issues": "https://github.com/jakubsuchy/amazon-alexa-php/issues",
+                "source": "https://github.com/jakubsuchy/amazon-alexa-php/tree/0.1.7"
+            },
+            "time": "2016-09-22T13:00:23+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -10213,8 +10434,9 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/alexa": 5,
         "drupal/default_content": 15,
         "drupal/gin": 15,
         "drupal/gin_toolbar": 10
