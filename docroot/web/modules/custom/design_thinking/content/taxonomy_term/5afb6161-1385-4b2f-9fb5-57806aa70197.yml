@@ -1,0 +1,26 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 5afb6161-1385-4b2f-9fb5-57806aa70197
+  bundle: phase
+  default_langcode: de
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: divergent
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: de

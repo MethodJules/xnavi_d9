@@ -1,0 +1,26 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 086430bd-9043-4271-bed5-156e0c248cb0
+  bundle: raum
+  default_langcode: de
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Lösungsraum
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: de

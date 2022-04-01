@@ -1,0 +1,612 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "dt zwei",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hallo",
+                        "wie geht's dir",
+                        "sag hallo welt",
+                        "sag hallo"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NameAllMethods",
+                    "slots": [
+                        {
+                            "name": "Phase",
+                            "type": "Phase"
+                        },
+                        {
+                            "name": "Anzahl",
+                            "type": "Method_Anzahl"
+                        },
+                        {
+                            "name": "Raum",
+                            "type": "Raum"
+                        }
+                    ],
+                    "samples": [
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kannst du aufzählen",
+                        "{Anzahl} Design Thinking Methoden aus der Phase {Phase} kannst du aufzählen",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} kannst du aufzählen",
+                        "{Anzahl} Design Thinking Methoden kannst du aufzählen",
+                        "Welche Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kannst du aufzählen",
+                        "Welche Design Thinking Methoden aus der Phase {Phase} kannst du aufzählen",
+                        "Welche Design Thinking Methoden aus dem {Raum} kannst du aufzählen",
+                        "Welche Methoden des Design Thinking kannst du aufzählen",
+                        "Welche Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kennst du",
+                        "Welche Design Thinking Methoden aus der Phase {Phase} kennst du",
+                        "Welche Design Thinking Methoden aus dem {Raum} kennst du",
+                        "Welche Methoden des Design Thinking kennst du",
+                        "Kannst du mir alle Design Thinking Methoden aus dem {Raum} und der Phase {Phase} nennen",
+                        "Kannst du mir alle Design Thinking Methoden aus der Phase {Phase} nennen",
+                        "Kannst du mir alle Design Thinking Methoden aus dem {Raum} nennen",
+                        "Kannst du mir alle Methoden des Design Thinking nennen",
+                        "Ich möchte alle Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kennen",
+                        "Ich möchte alle Design Thinking Methoden aus dem {Raum} kennen",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} auf",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} und der Phase {Phase} auf",
+                        "Ich möchte alle Design Thinking Methoden des Design Thinking der Phase {Phase} kennen",
+                        "Ich möchte alle Design Thinking Methoden des Design Thinking kennen",
+                        "Zähle mir alle Design Thinking Methoden der Phase {Phase} auf",
+                        "Zähle mir alle Design Thinking Methoden auf",
+                        "{Anzahl} Design Thinking Methoden im {Raum} und in der Phase {Phase} kennst du",
+                        "Nenne mir alle Design Thinking Methoden vom {Raum} und der Phase {Phase}",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} kennst du",
+                        "Nenne mir alle Design Thinking Methoden aus dem {Raum}",
+                        "{Anzahl} Design Thinking Methoden der Phase {Phase} kennst du",
+                        "{Anzahl} Design Thinking Methoden kennst du",
+                        "Nenne mir alle Design Thinking Methoden der Phase {Phase}",
+                        "Nenne mir alle Design Thinking Methoden"
+                    ]
+                },
+                {
+                    "name": "SuggestMethodIntent",
+                    "slots": [
+                        {
+                            "name": "Quantity",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "Phase",
+                            "type": "Phase"
+                        },
+                        {
+                            "name": "Raum",
+                            "type": "Raum"
+                        },
+                        {
+                            "name": "Hilfsmittel",
+                            "type": "Hilfsmittel"
+                        },
+                        {
+                            "name": "Dauer",
+                            "type": "Dauer"
+                        },
+                        {
+                            "name": "Beteiligte",
+                            "type": "Beteiligte"
+                        },
+                        {
+                            "name": "Anzahl",
+                            "type": "Method_Anzahl"
+                        },
+                        {
+                            "name": "Relation",
+                            "type": "Relation"
+                        }
+                    ],
+                    "samples": [
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} kennst du für die nur {Hilfsmittel} benötigt wird.",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kennst du für die nur {Hilfsmittel} benötigt wird.",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} auf für die nur {Hilfsmittel} benötigt wird.",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} und der Phase {Phase} auf für die nur {Hilfsmittel} benötigt wird.",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} kennst du an denen nur das {Beteiligte} beteiligt ist.",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kennst du an denen nur das {Beteiligte} beteiligt ist.",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} auf an denen nur das {Beteiligte} beteiligt ist.",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} und der Phase {Phase} auf an denen nur das {Beteiligte} beteiligt ist.",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} kennst du die {Relation} als {Quantity} {Dauer} dauern",
+                        "{Anzahl} Design Thinking Methoden aus dem {Raum} und der Phase {Phase} kennst du die {Relation} als {Quantity} {Dauer} dauern",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} auf die {Relation} als {Quantity} {Dauer} dauern",
+                        "Zähle mir alle Design Thinking Methoden aus dem {Raum} und der Phase {Phase} auf die {Relation} als {Quantity} {Dauer} dauern.",
+                        "{Anzahl} Design Thinking Methoden aus der Phase {Phase} kennst du an denen nur das {Beteiligte} beteiligt ist",
+                        "{Anzahl} Design Thinking Methoden aus der Phase {Phase} kennst du für die nur {Hilfsmittel} benötigt wird",
+                        "Zähle mir alle Design Thinking Methoden aus der Phase {Phase} auf an denen nur das {Beteiligte} beteiligt ist.",
+                        "Zähle mir alle Design Thinking Methoden aus der Phase {Phase} auf die nur {Hilfsmittel} benötigen.",
+                        "Zähle mir alle Design Thinking Methoden aus der Phase {Phase} auf die {Relation} als {Quantity} {Dauer} dauern."
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Method_Name",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Personas",
+                                "synonyms": [
+                                    "Persona"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Zählen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Predict Next Year's Headline",
+                                "synonyms": [
+                                    "Predict Next Years Headline"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Methode_Info",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Vorgehen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beispiel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nachteile"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vorteile"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Benötigte Zeit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hilfsmittel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beteiligte"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ziele"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "konvergent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "divergent"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Method_Anzahl",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Wie viele"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Raum",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Implementierungsraum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lösungsraum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Problemraum"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Dauer",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Monate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Monat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wochen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Woche"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": " Tage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tag"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stunden"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stunde"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minuten"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minute"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sekunden"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sekunde"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Hilfsmittel",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Schreibmaterial"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Beteiligte",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Design-Thinking-Team"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Relation",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "länger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "weniger"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Methodenname",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Konkurrent - Komplementor Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ereignisgesteuerte Prozesskette"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Click Dummy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Click Dummy Prototyp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stakeholder Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tree testing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Zählen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A B Testing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Random Input"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Methodeninfo",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Phase"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Raum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Test"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ziele"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beteiligte",
+                                "synonyms": [
+                                    "Beteiligten"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hilfsmittel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Benötigte Zeit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vorteile"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nachteile"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beispiel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vorgehen"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "KompletteInformationen",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "mehr"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "etwas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gesamt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Alles"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Alle"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DT",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "stanforder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hildesheimer "
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "iterativ"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "betreibt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hildesheim"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stanford"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wie viele "
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Phase"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Raum "
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Räume"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Phasen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Definiere"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ziele "
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Zsm",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "was"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "benötigt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "braucht"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Zusammen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Etwas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fasse "
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

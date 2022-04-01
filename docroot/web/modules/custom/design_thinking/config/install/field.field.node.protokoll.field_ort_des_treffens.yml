@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ort_des_treffens
+    - node.type.protokoll
+id: node.protokoll.field_ort_des_treffens
+field_name: field_ort_des_treffens
+entity_type: node
+bundle: protokoll
+label: 'Ort des Treffens'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

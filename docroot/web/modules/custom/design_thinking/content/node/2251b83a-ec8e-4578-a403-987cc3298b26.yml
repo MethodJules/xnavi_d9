@@ -1,0 +1,77 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2251b83a-ec8e-4578-a403-987cc3298b26
+  bundle: methode
+  default_langcode: de
+  depends:
+    97675b1d-e86d-4195-845a-649dfcd902a3: taxonomy_term
+    11539d06-e4a4-4ba0-9842-133075e1839b: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Konkurrent - Komplementor Map (Define)'
+  created:
+    -
+      value: 1648540094
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: de
+  body:
+    -
+      value: "<p>Die Konkurrent - Komplementor Map ist eine Möglichkeit die Position des Unternehmens oder Produktes in seiner Branche sichtbar zu machen. Es wird zudem aufgezeigt, wie Produkte miteinander konkurrieren oder sich ergänzen können.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_benoetigte_zeit:
+    -
+      value: '40, 60'
+      format: basic_html
+  field_beteiligte:
+    -
+      value: "<p>Beteiligt ist neben einem Moderator das Kernteam eines Projektes. Üblicherweise sind das der Projektmanager und die Leiter des Design und des&nbsp;Technik- und/oder&nbsp;Entwicklungsteams. Wenn es möglich ist, kann die Teilnahme eines End-Users hilfreich sein.</p>\r\n"
+      format: basic_html
+  field_hilfsmittel:
+    -
+      value: "<p>Benötigt wird ein großes Whiteboard, Flipchart oder etwas Ähnliches, Stifte für alle Teilnehmer und ausreichend Post-Its in zwei verschiedenen Farben.</p>\r\n"
+      format: basic_html
+  field_nachteile:
+    -
+      value: "<ol>\r\n\t<li>Je nach gewählter Durchführungsmethode dauert das Mapping potentiell länger, oder die Informationen werden nicht vollständig erhoben.</li>\r\n\t<li>Wenn viele Aspekte oder Eigenschaften betrachtet werden sollen, werden auch viele Maps notwendig, was dazu führt, dass mehr Zeit benötigt wird.</li>\r\n</ol>\r\n"
+      format: basic_html
+  field_phase:
+    -
+      entity: 97675b1d-e86d-4195-845a-649dfcd902a3
+  field_raum:
+    -
+      entity: 11539d06-e4a4-4ba0-9842-133075e1839b
+  field_vorgehen:
+    -
+      value: "<p>Zunächst mal muss geklärt werden, was mit Konkurrent und Komplementor gemeint ist.</p>\r\n\r\n<p>Ein Konkurrent ist jedes Unternehmen oder Produkt, dass mit uns in einem wirtschaftlichen Wettbewerb steht. Auch Etwas, das die Aufmerksamkeit von uns oder unserem Produkt ablenkt, kann als Konkurrent gewertet werden.</p>\r\n\r\n<p>Ein Komplementor ist jedes Unternehmen oder Produkt, das sich zu uns oder unserem Produkt komplementär, also ergänzend verhält. Beispielsweise sind Kaffeefiltertüten ein Komplementor von Filterkaffeemaschinen. Betrachten kann man hierbei gegebenenfalls auch Unternehmen aus einer anderen&nbsp;Branche. Die Holzindustrie kann beispielsweise als Komplementor der Bauindustrie auftreten.</p>\r\n\r\n<p>Um diese Methode durchzuführen, müssen die folgenden vier Schritte gemacht werden:</p>\r\n\r\n<p><strong>Vorbereitung</strong>&nbsp;- Als erster Schritt wird das Whiteboard oder der Zettel an der Flipchart in vier Quadranten geteilt. Diese ergeben sich, indem man eine x- und eine y-Achse kreuzt. An die Achsen werden die Eigenschaften geschrieben, nach denen wir unsere Konkurrenten und Komplementoren betrachten wollen. Soll beispielsweise die Altersstruktur&nbsp;betrachtet werden, wird ans das obere Ende der&nbsp;y-Achse \"Viele\" und an das untere Ende \"Wenige\" geschrieben. An das linke Ende der x-Achse kommt \"jung\" und das rechte Ende wird mit \"älter\" beschriftet. Sobald man tiefer im Thema drin ist und einem weitere Ideen für Eigenschaften kommen, können später noch weitere solcher Diagramme erstellt werden.</p>\r\n\r\n<p><strong>Mapping durchführen</strong>&nbsp;- Es ist wichtig Post-Its in zwei verschiedenen Farben zu verwenden, eine Farbe für die Konkurrenten und eine für die Komplementoren und es wird pro Post-It nur ein einziger Konkurrent oder Komplementor aufgeschrieben. Es gibt nun zwei Möglichkeiten dass Mapping durchzuführen und das Verfahren muss für jede Map einzeln durchgeführt werden.</p>\r\n\r\n<ol>\r\n\t<li>Die Erste ist:&nbsp;zunächst schreibt jeder&nbsp;Teilnehmer, ohne Einfluss durch andere Teilnehmer,&nbsp;einige Minuten alleine seine Ideen auf und klebt diese danach an die gewünschte Stelle in der Map. Erst danach wird in der Gruppe über einzelne Ideen diskutiert und die Post-Its neupositioniert oder entfernt, bis ein gemeinsamer Konsens gefunden ist. Dabei sollten Duplikate nicht entfernt werden, da diese aufzeigen können, dass einige Ideen besonders oft vorkommen und damit eventuell besonders wichtig sind.</li>\r\n\t<li>Die Zweite Möglichkeit besteht darin, dass man direkt mit dem gemeinsamen Mapping und Diskutieren startet. Dadurch kommt man schneller zu einem Konsens. Allerdings fallen dadurch eventuell aussagekräftige&nbsp;Duplikate weg und schüchterne Teilnehmen melden sich eventuell nicht zu Wort, obwohl sie wichtige Beiträge leisten könnten.</li>\r\n</ol>\r\n\r\n<p><strong>Eigene Position bestimmen und Handlungsschritte diskutieren</strong>&nbsp;- &nbsp;Nachdem das Mapping für alle Maps durchgeführt worden ist, gehen wir in der Gruppe nun jede Map einzeln durch und positionieren unser Produkt oder unser Unternehmen in der Map. Über die Positionierung sollte ausreichend diskutiert werden, sodass eine möglichst realistische Position gefunden wird. Wenn die eigene Position in einer Map gefunden ist, wird in der Gruppe darüber diskutiert, wie die Produkt- oder Unternehmenslandschaft in dieser einen Map aussieht, bevor sich der nächsten Map gewidmet wird:&nbsp;Welche Chancen oder Risiken lassen sich erkennen, welche Veränderungen sind in der Zukunft zu erwarten und wie beeinflussen sie die Map? Aus dieser Diskussion sollen mögliche Handlungsschritte erarbeitet werden.&nbsp;</p>\r\n\r\n<p><strong>Nachbereitung und Handlungsschritte durchführen</strong>&nbsp;- Ist die Diskussion beendet, müssen die Erkenntnisse in einer für alle zugänglichen Form dokumentiert werden. Wie diese Form aussieht, liegt bei Ihnen. Denkbar ist beispielsweise ein Spreadsheet das im entsprechenden Ordner der zentralen Dokumentenverwaltung des Unternehmens liegt.&nbsp;Zudem wird eine Auflistung der beschlossenen Handlungsschritte benötigt. Idealerweise werden die einzelnen Schritte direkt an Verantwortliche übertragen, um die Durchführung sicherzustellen.</p>\r\n"
+      format: basic_html
+  field_vorteile:
+    -
+      value: "<ol>\r\n\t<li>Diese Methode ist zeitlich überschaubar.</li>\r\n\t<li>Es werden Diskussionen angeregt, die Potentiale für Partnerschaften mit anderen Unternehmen oder Produkten aufzeigen können</li>\r\n\t<li>Konkurrenten und Komplementoren können unter Berücksichtigung von&nbsp;vielen Aspekten betrachtet und sichtbar gemacht werden, beispielsweise Zielgruppen, Preis, Wertversprechen, Marktanteil, Umfang an Features.</li>\r\n</ol>\r\n"
+      format: basic_html
+  field_ziele:
+    -
+      value: "<p>Konkurrenten und oder Komplementoren eines Produktes oder Unternehmens erkennen und verstehen.</p>\r\n"
+      format: basic_html

@@ -1,0 +1,81 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7e1994ee-a5d1-42a1-9d94-6e93427b99d9
+  bundle: methode
+  default_langcode: de
+  depends:
+    5afb6161-1385-4b2f-9fb5-57806aa70197: taxonomy_term
+    086430bd-9043-4271-bed5-156e0c248cb0: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: '635-Methode (Ideenfindung)'
+  created:
+    -
+      value: 1648539791
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: de
+  body:
+    -
+      value: "<p>Die 635-Methode&nbsp;ist eine&nbsp;Kreativitätstechnik,&nbsp;bei der innerhalb eines Teams von sechs&nbsp;Leuten eine möglichst hohe Anzahl an Ideen zur Lösung eines Problems entstehen sollen. Die Methoden werden dabei gemeinsam Entwickelt. Jeder Teilnehmer gibt drei Ansätze vor, die von den übrigen fünf&nbsp;Teilnehmern erweitert werden.&nbsp;Dabei können auch ungewöhnliche Ideen entstehen. Die 635-Methode wurde 1968 von dem&nbsp;Marketing- und&nbsp;Unternehmensberater&nbsp;Bernd Rohrbach entwickelt.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_beispiel:
+    -
+      value: "<p>Das folgende Beispiel veranschaulicht eine Skizzierung eines Ideenfindungs-Sheets zur Durchführung der 635-Methode. Für jeden der 6 Teilnehmer ist eine Zeile mit 3 Spalten vorhanden in denen ihre Ideen eingetragen werden. Anschließend werden die Ideen gemeinsam ausgewertet.</p>\r\n"
+      format: basic_html
+  field_benoetigte_zeit:
+    -
+      value: '20, 30'
+      format: basic_html
+  field_beteiligte:
+    -
+      value: "<p>Beteiligte dieses Verfahrens sind z.B. das Design Thinking Team, Projektteam oder andere Projektbeteiligte. Alle beteiligten sollten dabei aus einem Moderator und sechs Teilnehmern bestehen.</p>\r\n"
+      format: basic_html
+  field_hilfsmittel:
+    -
+      value: "<p>Als Hilfsmittel für diese Kreativitätsmethoden werden&nbsp;lediglich Papier und Stifte für die Teilnehmer benötigt. Um die Ergebnisse zusammenzufassen wäre für den Moderator ein Flipchart sinnvoll.</p>\r\n"
+      format: basic_html
+  field_nachteile:
+    -
+      value: "<p>Die Nachteile der 635-Methode sehen wie folgt aus:&nbsp;Die Ideen entstehen innerhalb eines kurzen Zeitraums und sind daher selten ausgereift. Sie dienen zunächst lediglich als Richtungsweiser für erweiterte Ideenentwicklungen. Während der Durchführung der Methode sind kaum Rückfragen bei Unklarheiten möglich. Darüber hinaus kann der starre Ablaufmechanismus die Kreativität stören. Weiterhin sind bei dieser Methode Redundanzen in den Ideen möglich, die das Ziel einer möglichst hohen Ideenanzahl beeinträchtigen.</p>\r\n"
+      format: basic_html
+  field_phase:
+    -
+      entity: 5afb6161-1385-4b2f-9fb5-57806aa70197
+  field_raum:
+    -
+      entity: 086430bd-9043-4271-bed5-156e0c248cb0
+  field_vorgehen:
+    -
+      value: "<p>Bei der 635-Methode wird folgendermaßen vorgegangen. Die Kreativitätstechnik beginnt mit der Formulierung der Problemsituation. Jeder Teilnehmer erhält anschließend einen Stift und Papier für seine Ideen. Jeder Teilnehmer überlegt sich dann Lösungsansätze für das beschriebene Problem. Nach einem gewissen Zeitraum, zum Beispiel&nbsp;drei Minuten,&nbsp;werden die Blätter in der Runde weitergereicht. Jeder Teilnehmer versucht dann die aufgeschriebenen Ideen seines Vorgängers zu ergänzen oder weiterzuentwickeln. Das Weiterreichen findet insgesamt fünf Mal statt, bis jedes Mitglied den Zettel mit seiner eigenen Idee wieder vor sich liegen hat. Im Anschluss werden die Ergebnisse mit der gesamten Gruppe analysiert, bewertet und diskutiert.</p>\r\n"
+      format: basic_html
+  field_vorteile:
+    -
+      value: "<p>Die Vorteile dieser Methode liegen in der Generierung vieler neuer und kreativer Ideen. Darüber hinaus können festgefahrene Ansichten aufgebrochen werden und neue Ansätze entwickelt werden. Weiterhin erhalten alle Teilnehmer direktes Feedback zu ihren Ansätzen, welche auch nicht sofort kritisiert&nbsp;werden. Ein Protokoll hält dabei den Werdegang zur eigentlichen Idee fest. Das Dominieren oder Zurückhalten durch einzelne Teilnehmer wird dabei ausgeschlossen.</p>\r\n"
+      format: basic_html
+  field_ziele:
+    -
+      value: "<p>Das Ziel dieser Methode ist es eine möglichst hohe Anzahl an Ideen durch die Teilnehmer zu generieren. Dabei geht es um die Quantität der Denkansätze und die Integration der gesamten Gruppe, um möglichst viele kreative und vielfältige Ideen auszuarbeiten.</p>\r\n"
+      format: basic_html

@@ -1,0 +1,5 @@
+services:
+  design_thinking.request_subscriber:
+    class: Drupal\design_thinking\EventSubscriber\RequestSubscriber
+    tags:
+      - {name: event_subscriber}

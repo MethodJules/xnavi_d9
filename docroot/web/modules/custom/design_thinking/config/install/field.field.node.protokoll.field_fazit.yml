@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fazit
+    - node.type.protokoll
+  module:
+    - text
+id: node.protokoll.field_fazit
+field_name: field_fazit
+entity_type: node
+bundle: protokoll
+label: Fazit
+description: "Fazit des Treffens\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

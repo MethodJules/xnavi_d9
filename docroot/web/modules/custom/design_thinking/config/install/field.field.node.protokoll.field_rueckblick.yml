@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rueckblick
+    - node.type.protokoll
+  module:
+    - text
+id: node.protokoll.field_rueckblick
+field_name: field_rueckblick
+entity_type: node
+bundle: protokoll
+label: Rückblick
+description: 'kurzer Rückblick auf das letzte Treffen (Was war das Fazit?)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,124 @@
+<?php
+
+/**
+* Implements hook_schema().
+*/
+
+function design_thinking_schema() {
+    $schema['protocol'] = array(
+        'description' => 'The table contains all protocols',
+        'fields' => array(
+            'protocol_id' => array(
+                'description' => 'The primary identifier for a protocol.',
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ),
+            'place' => array(
+                'description' => 'The place of the protocol',
+                'type' => 'varchar',
+                'length' => 1024,
+                'not null' => FALSE,
+                'default' => '',
+            ),
+            'type' => array(
+                'description' => 'The type of the protocol',
+                'type' => 'varchar',
+                'length' => 1024,
+                'not null' => FALSE,
+                'default' => '',
+            ),
+            'uid' => array(
+                'description' => 'The user id from the author of the protocol',
+                'type' => 'int',
+                'not null' => TRUE,
+                'sortable' => TRUE,
+                'views' => TRUE,
+            ),
+            'date' => array(
+                 'description' => 'The creation date of the protocol',
+                 'type' => 'varchar',
+                 'mysql_type' => 'datetime',
+                 'not null' => FALSE,
+            ),
+            'finished' => array(
+                'description' => 'The status of the protocol. 0 == open, 1 == finished',
+                'type' => 'int',
+                'not null' => TRUE,
+                'sortable' => TRUE,
+                'views' => TRUE,
+            ),
+            'preparation' => array(
+                'description' => 'The preparation of the protocol',
+                'type' => 'varchar',
+                'length' => 1024,
+                'not null' => FALSE,
+                'default' => '',
+            ),
+            'problems' => array(
+                'description' => 'The problems of the protocol',
+                'type' => 'varchar',
+                'length' => 1024,
+                'not null' => FALSE,
+                'default' => '',
+            ),
+            'conclusion' => array(
+                'description' => 'The conclusion of the protocol',
+                'type' => 'varchar',
+                'length' => 1024,
+                'not null' => FALSE,
+                'default' => '',
+            ),
+            'participants' => array(
+                 'description' => 'The participants of the protocol',
+                 'type' => 'varchar',
+                 'length' => 1024,
+                 'not null' => FALSE,
+                 'default' => '',
+            ),
+            'raum_end' => array(
+                 'description' => 'The room after finishing the protocol',
+                 'type' => 'varchar',
+                 'length' => 1024,
+                 'not null' => FALSE,
+                 'default' => '',
+            ),
+            'phase_end' => array(
+                 'description' => 'The phase after finishing the protocol',
+                 'type' => 'varchar',
+                 'length' => 1024,
+                 'not null' => FALSE,
+                 'default' => '',
+            ),
+            'review' => array(
+                 'description' => 'The review of the last protocol',
+                 'type' => 'varchar',
+                 'length' => 1024,
+                 'not null' => FALSE,
+                 'default' => '',
+            ),
+            'start_date' => array(
+                 'description' => 'The start date of the protocol',
+                 'type' => 'varchar',
+                 'mysql_type' => 'datetime',
+                 'not null' => FALSE,
+            ),
+            'end_date' => array(
+                 'description' => 'The end date of the protocol',
+                 'type' => 'varchar',
+                 'mysql_type' => 'datetime',
+                 'not null' => FALSE,
+            ),
+            'outlook' => array(
+                 'description' => 'The outlook to the next protocol',
+                 'type' => 'varchar',
+                 'length' => 1024,
+                 'not null' => FALSE,
+                 'default' => '',
+            ),
+        ),
+        'primary key' => array('method_execution_id'),
+    );
+    return $schema;
+
+}

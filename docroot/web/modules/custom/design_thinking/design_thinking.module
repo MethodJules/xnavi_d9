@@ -1,0 +1,98 @@
+<?php
+
+/**
+* Implements hook_form_FORM_ID_alter().
+*/
+
+function design_thinking_form_node_protokoll_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+    
+        // Modification for the form with the given form ID goes here. For example, if
+        // FORM_ID is "user_register_form" this code would run only on the user
+        // registration form.
+    
+        // Add a checkbox to registration form about agreeing to terms of use.
+        $form['terms_of_use'] = [
+            '#type' => 'checkbox',
+            '#title' => t("I agree with the website's terms and conditions."),
+            '#required' => TRUE,
+            '#weight' => 1000,
+        ];
+
+        $form['overview_tasks_last_protocol'] = [
+                '#type' => 'table',
+                '#caption' => t('Übersicht über Aufgaben aus dem letzten Protokoll'),
+                '#header' => [t('Kurzbezeichnung'), t('Wer?'),t('Was?'), t('Wann?'), t('Status')],
+                '#rows' => [
+                  [t('Amber'), t('teal')],
+                  [t('Addi'), t('green')],
+                ],
+                '#description' => t('Example of using #type.'),
+        ];
+
+        $form['overview_open_tasks'] = [
+            '#type' => 'table',
+            '#caption' => t('Übersicht über alle noch offenen Aufgaben'),
+            '#header' => [t('Kurzbezeichnung'), t('Wer?'),t('Was?'), t('Wann?'), t('Status')],
+            '#rows' => [
+              [t('Amber'), t('teal')],
+              [t('Addi'), t('green')],
+            ],
+            '#description' => t('Example of using #type.'),
+        ];
+
+        $form['overview_of_methods_for_the_current_meeting'] = [
+            '#type' => 'table',
+            '#caption' => t('In diesem Schritt werden alle im Rahmen dieses Treffens bearbeitete Methoden aufgelistet.'),
+            '#header' => [t('Methodenname'), t('Bewertung?')],
+            '#rows' => [
+              [t('Amber'), t('teal')],
+              [t('Addi'), t('green')],
+            ],
+            '#description' => t('Example of using #type.'),
+        ];
+
+        $form['execute_method'] = [
+            '#type' => 'link',
+            '#title' => t('Neue Methode durchführen'),
+            '#attributes' => [
+                'id' => 'execute_method_button',
+                'class' => [
+                    'btn',
+                    'btn-primary'
+                ]
+                ],
+            '#url' => \Drupal\Core\Url::fromRoute('dt_procedure.front.page'),
+        ];
+    
+}
+
+function _createTaskTable() {
+
+}
+
+/**
+* Implements hook_uninstall().
+*/
+
+function design_thinking_uninstall() {
+
+  /*
+    // Remove the styles directory and generated images.
+    \Drupal::service('file_system')->deleteRecursive(\Drupal::config('system.file')->get('default_scheme') . '://styles');
+  */
+
+  // Delete all nodes
+  $storage_handler = \Drupal::entityTypeManager()
+    ->getStorage('node');
+  $nodes = $storage_handler->loadByProperties(['type' => 'methode']);
+  $storage_handler->delete($nodes);
+
+  // Delete content type.
+  $content_type = \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load('methode');
+  $content_type->delete();
+
+  // TODO: Protkoll???
+}

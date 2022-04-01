@@ -1,0 +1,77 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 025569eb-debd-4c36-9e32-6f8ee9e400f9
+  bundle: methode
+  default_langcode: de
+  depends:
+    5afb6161-1385-4b2f-9fb5-57806aa70197: taxonomy_term
+    c6f1ef00-66c3-4e21-a190-0fc38093dc6e: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Mock-Ups (Prototyp)'
+  created:
+    -
+      value: 1648539457
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: de
+  body:
+    -
+      value: "<p>Mock-Ups sind eine grafische Visualisierungsmöglichkeit oder auch Attrappen und werden bei der Konzeptionierung von grafischen Benutzeroberflächen verwendet, um einen voraussichtlichen Eindruck über die Bedienung einer Anwendung zu geben. Je nach Anforderung simuliert ein Mock-Up die vollständige Benutzeroberfläche inklusive aller Funktionen der Anwendung und Inhalte oder nur einen ausgewählten Teil der für Nutzertests und Feedback ausgewählt wird. Mock-Ups ermöglichen somit die Einholung von Meinungen und Erfahrungswerten aus Nutzersicht, vor der eigentlichen Entwicklung.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_benoetigte_zeit:
+    -
+      value: 'Die benötigte Zeit liegt zwischen einem und zwei Tagen.'
+      format: basic_html
+  field_beteiligte:
+    -
+      value: "<p>Beteiligte bei der Entwicklung von Mockups sind u.a. das Design-Thinking Team des jeweiligen Projekts. Für die Erstellung der Mock-Ups können z.B. externe Personen, wie UX-Designer involviert sein. Die Evaluation findet durch das Projektteam und weitere beteiligte Personen statt. Hierunter können auch die späteren Entwickler und Endnutzer beteiligt werden.</p>\r\n"
+      format: basic_html
+  field_hilfsmittel:
+    -
+      value: "<p>Die Hilfsmittel, die man für ein Mock-Up benötigt, hängen davon ab, wie realitätsnah es sein soll. Für eine grobe Skizzierung können Papier, Whiteboards oder Tools wie PowerPoint verwendet werden. Ein detaillierterer Mock-Up kann mit HTML Editoren oder UX-Design Tools, wie Axure RP erstellt werden.</p>\r\n"
+      format: basic_html
+  field_nachteile:
+    -
+      value: "<p>Es gibt insgesamt drei Nachteile. Der erste Nachteil besteht darin, dass Ressourcen, wie Arbeitszeit, für Mockups aufgwewendet werden müssen. Der zweite Nachteil ist, dass eine Balance zwischen benötigter Zeit, Hilfsmittel und Genauigkeit hergestellt werden muss, um den größtmöglichen Nutzen aus dem Mockup zu generieren. Der dritte Nachteil besteht darin, dass für die uneingeschränkte Entwicklung von Mockups oftmals kostenpflichtige Programme und technisches Know-How nötig sind.</p>\r\n"
+      format: basic_html
+  field_phase:
+    -
+      entity: 5afb6161-1385-4b2f-9fb5-57806aa70197
+  field_raum:
+    -
+      entity: c6f1ef00-66c3-4e21-a190-0fc38093dc6e
+  field_vorgehen:
+    -
+      value: "<p>Das Vorgehen beginnt mit der Definition der Bestandteile mit Komponenten und Funktionen im ersten Schritt. Anschließend wird die gewünschte Umsetzungsform, zum Beispiel auf Papier oder durch ein Design-Tool) ausgewählt. Danach wird mit den Rahmenkomponenten, wie Header, Footer und Hauptmenü begonnen. Zum Schluss müssen die spezifischen Komponenten, wie konkrete Seiteninhalte und Funktionen gestaltet werden.</p>\r\n"
+      format: basic_html
+  field_vorteile:
+    -
+      value: "<p>Es gibt insgesamt drei Vorteile. Der erste Vorteil besteht darin, dass Mockups zur Vorstellung dienen, wie die Anwendung oder eine GUI später aussehen wird und zu bedienen ist, vor der eigentlichen Entwicklung. Der zweite Vorteil besteht darin, dass sie weiterhin helfen erste Problematiken und Verständnisfehler aufzuzeigen und diese frühzeitig zu optimieren. Dabei wird das Risiko für eine Neukonzeptionierung während der Entwicklungsphase minimiert. Ebenso werden dabei Kosten für Entwicklungsanpassungen/- optimierungen reduziert. Der dritte Vorteil ist das Testen der Benutzeroberfläche vor der eigentlichen Entwicklung z.B. durch eine ausgewählte Nutzergruppe. Das kann dem Projektteam und den Entwicklern weitere Anpassungsmöglichkeiten aufzeigen und zu einer ersten Usability-Bewertung verhelfen.</p>\r\n"
+      format: basic_html
+  field_ziele:
+    -
+      value: "<p>Das übergeordnete Ziel von Mock-Ups ist es, die Idee für den Aufbau und die Nutzung einer zukünftigen Anwendung greifbar zu machen. Sie dienen dabei vor allem, um schnelles Feedback zur Optik (Look-and-Feel) der Benutzeroberfläche einzuholen. Dabei sollen sie so realistisch wie möglich erlebbar sein, um möglichst spezifisches und detailgetreues Feedback zu erhalten. Dieses Feedback wird dabei genutzt, um die Nutzerfreundlichkeit und die Qualität der Anwendung vor der eigentlichen Entwicklung anzupassen.</p>\r\n"
+      format: basic_html
