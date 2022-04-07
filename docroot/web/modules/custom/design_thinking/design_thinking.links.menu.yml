@@ -1,0 +1,6 @@
+design_thinking.design_thinking_alexa_settings:
+  title: DT Alexa Settings
+  description: Default Value for the Design Thinking Alexa Skill
+  parent: system.admin_config_system
+  route_name: design_thinking.design_thinking_alexa_settings
+  weight: 10

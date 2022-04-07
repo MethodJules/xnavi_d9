@@ -28,6 +28,10 @@ class RequestSubscriber implements EventSubscriberInterface {
         $request = $event->getRequest();
         $response = $event->getResponse();
 
+        //Get the default value 
+        $alexa_default = \Drupal::config('design_thinking.settings')->get('alexa_default');
+
+
         $phase = isset($request->slots['Phase']) ? $request->slots['Phase'] : NULL;
         $raum = isset($request->slots['Raum']) ? $request->slots['Raum'] : NULL;
 
@@ -43,7 +47,7 @@ class RequestSubscriber implements EventSubscriberInterface {
                 $output = $this->SuggestMethodIntent($request);
                 $response->respond($output);
             default: 
-                $response->respond('Das ist der default Wert von DT 2');
+                $response->respond($alexa_default);
                 break;
         }
     }

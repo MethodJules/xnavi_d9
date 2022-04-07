@@ -3,7 +3,7 @@
 /**
 * Implements hook_schema().
 */
-
+/*
 function design_thinking_schema() {
     $schema['protocol'] = array(
         'description' => 'The table contains all protocols',
@@ -122,3 +122,4 @@ function design_thinking_schema() {
     return $schema;
 
 }
+*/

@@ -1,0 +1,81 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 283d5678-e9e8-44d9-ba67-f8d9894ba10a
+  bundle: methode
+  default_langcode: de
+  depends:
+    5afb6161-1385-4b2f-9fb5-57806aa70197: taxonomy_term
+    c6f1ef00-66c3-4e21-a190-0fc38093dc6e: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Papierprototyp (Prototyp)'
+  created:
+    -
+      value: 1649080818
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: de
+  body:
+    -
+      value: "<p>Ein Papierprototyp visualisiert die elementaren Merkmale einer Produktidee, wie z.B. die Entwicklung einer Anwendung. Die Programmoberfläche wird dabei, samt der mit ihren möglichen Interaktionen, in Abstrakter Form dargestellt. Es geht dabei nicht um das Testen der Anwendung, sondern der Darstellung des Konzepts und der möglichen Aufteilung einzelner Anwendungskomponenten. Dabei werden bewusst einfache Hilfsmittel verwendet.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_beispiel:
+    -
+      value: "<p>Ein Besipiel eines Papierprototyps ist die Abbildung der Benutzeroberfläche einer Webseite. Dieser wird per Hand aufgezeichnet und bildet die grafische Benutzeroberfläche einer Software ab, sodass der Nutzer die Bedienung simulieren kann.</p>\r\n"
+      format: basic_html
+  field_benoetigte_zeit:
+    -
+      value: '40, 60'
+      format: basic_html
+  field_beteiligte:
+    -
+      value: "<p>Die Beteiligten zur Erstellung eines Papierprototypen sind eine Person oder ein ganzes Team. Dies kann das&nbsp;Design-Thinking oder&nbsp;andere Projektteam sein. Für die Evaluation sollten in jedem Fall weitere Personen hinzugezogen werden.</p>\r\n"
+      format: basic_html
+  field_hilfsmittel:
+    -
+      value: "<p>Benötigt werden für einen Papierprototyopen lediglich Stifte und Papier.&nbsp;Für große Darstellungen, die im Team evaluiert werden sollen eignen sich Flipcharts oder Whiteboards.</p>\r\n"
+      format: basic_html
+  field_nachteile:
+    -
+      value: "<p>Es gibt insgesamt fünf Nachteile. Der erste Nachteil besteht darin, dass für den Papierprototypen Ressourcen, wie z.B. Arbeitszeit aufgewendet werden müssen. Der zweite Nachteil sind mögliche Differenzen und Diskussionen, welche die Dauer für den Prototypen verlängern können. Der dritte Nachteil besteht darin, dass der Papierprototyp nur zu Beginn des Projekts relevant ist. In fortgeschrittenen Phasen des Projekts schafft diese Methode kaum bis geringen Mehrwert. Der vierte Nachteil besteht darin, dass der Papierprototyp ist nicht realitätsnah ist, es werden keine Interaktionen und Funktionen abgebildet. Der fünfte und letzte Nachteil ist die nur eingeschränkt mögliche&nbsp;Usability-Bewertung eines Papierprototypen.</p>\r\n"
+      format: basic_html
+  field_phase:
+    -
+      entity: 5afb6161-1385-4b2f-9fb5-57806aa70197
+  field_raum:
+    -
+      entity: c6f1ef00-66c3-4e21-a190-0fc38093dc6e
+  field_vorgehen:
+    -
+      value: "<p>Das Vorgehen beginnt mit dem ersten Schritt, hier werden elementare Kriterien für das Konzept identifiziert. Anschließend wird der&nbsp;Abstraktionsgrad der visuellen Konzeptdarstellung definiert, da ein noch höherer Detaillierungsgrad wenig Sinn macht. Danach erfolgt die Modellierung des Papierprototypen anhand ausgewählter Materialien, sowie die Vorführung des Papierprototypen vor unterschiedlichen Zielgruppen.&nbsp;Im Anschluss zur Vorführung soll eine offene Diskussion eingeleitet werden über weitere Chancen, Potentiale, aber auch um negative Aspekte zu vermeiden. Zum Schluss erfolgt die Dokumentation der Ergebnisse aus Vorführung und Diskussion, zur weiteren Nutzung im Projektverlauf.</p>\r\n"
+      format: basic_html
+  field_vorteile:
+    -
+      value: "<p>Es gibt insgesamt fünf Vorteile. Der erste Vorteil besteht darin, dass der Papierprototyp dabei hilft, eine klare Definition für das Konzept innerhalb des Teams zu schaffen. Dadurch können&nbsp;Fehlern im späteren Verlauf des Projekts vermieden werden. Der zweite Vorteil besteht darin, dass der Papierprototyp eine gute Möglichkeit darstellt, weitere Meinungen einfließen zu lassen und zur Klärung von Meinungsdifferenzen dient. Der dritte Vorteil ist, dass mithilfe des Papierprototyps alle&nbsp;Projektteilnehmer auf derselben Basis arbeiten. Der vierte Vorteil besteht darin, dass der Papierprototyp schnell und kostengünstig erstellt werden kann. Als fünfter Vorteil kann genannt werden, dass keine&nbsp;technischen Kenntnisse oder Software benötigt werden.</p>\r\n"
+      format: basic_html
+  field_ziele:
+    -
+      value: "<p>Das Ziel des Papierprototypen besteht darin, möglichst einfach und schnell das Konzept anhand seiner elementarsten Merkmale definieren, darstellen und im Team beurteilen zu können. Die Evaluation findet dabei im Team statt.</p>\r\n"
+      format: basic_html

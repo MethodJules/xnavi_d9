@@ -75,12 +75,8 @@ function _createTaskTable() {
 * Implements hook_uninstall().
 */
 
+/*
 function design_thinking_uninstall() {
-
-  /*
-    // Remove the styles directory and generated images.
-    \Drupal::service('file_system')->deleteRecursive(\Drupal::config('system.file')->get('default_scheme') . '://styles');
-  */
 
   // Delete all nodes
   $storage_handler = \Drupal::entityTypeManager()
@@ -92,7 +88,8 @@ function design_thinking_uninstall() {
   $content_type = \Drupal::entityTypeManager()
     ->getStorage('node_type')
     ->load('methode');
-  $content_type->delete();
-
+  if(!is_null($content_type)) {
+    $content_type->delete();
+  }
   // TODO: Protkoll???
-}
+}*/

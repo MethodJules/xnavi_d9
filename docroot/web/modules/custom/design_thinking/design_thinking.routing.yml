@@ -19,3 +19,18 @@ dt_procedure.method_display:
     _controller: 'Drupal\design_thinking\Controller\DTProcedure::getNodesByTaxonomyTermIds'
   requirements:
     _permission: 'access content'
+
+design_thinking.protocol_form:
+  path: '/dt/protocol/form'
+  defaults:
+    _form: 'Drupal\design_thinking\Form\DesignThinkingProtocolForm'
+  requirements:
+    _permission: 'access content'
+
+design_thinking.design_thinking_alexa_settings:
+  path: '/admin/config/system/design-thinking-alexa-settings'
+  defaults:
+    _title: 'Design thinking alexa settings'
+    _form: 'Drupal\design_thinking\Form\DesignThinkingAlexaSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
