@@ -4,7 +4,6 @@ namespace Drupal\search_api_solr\Event;
 
 use Drupal\Component\EventDispatcher\Event;
 use Drupal\search_api\Query\QueryInterface;
-use Solarium\QueryType\Select\Result\Result;
 
 /**
  * Search API Solr event base class.
@@ -16,26 +15,26 @@ abstract class AbstractSearchApiQuerySolariumResultEvent extends Event {
    *
    * @var \Drupal\search_api\Query\QueryInterface
    */
-  protected $search_api_query;
+  protected $searchApiQuery;
 
   /**
    * The solarium result.
    *
-   * @var \Solarium\QueryType\Select\Result\Result
+   * @var \Solarium\QueryType\Select\Result\Result|\Solarium\QueryType\Stream\Result
    */
-  protected $solarium_result;
+  protected $solariumResult;
 
   /**
    * Constructs a new class instance.
    *
    * @param \Drupal\search_api\Query\QueryInterface $search_api_query
    *   The search_api query.
-   * @param \Solarium\QueryType\Select\Result\Result $solarium_result
-   *   The solarium query.
+   * @param \Solarium\QueryType\Select\Result\Result|\Solarium\QueryType\Stream\Result $solarium_result
+   *   The solarium result.
    */
-  public function __construct(QueryInterface $search_api_query, Result $solarium_result) {
-    $this->search_api_query = $search_api_query;
-    $this->solarium_result = $solarium_result;
+  public function __construct(QueryInterface $search_api_query, $solarium_result) {
+    $this->searchApiQuery = $search_api_query;
+    $this->solariumResult = $solarium_result;
   }
 
   /**
@@ -45,17 +44,17 @@ abstract class AbstractSearchApiQuerySolariumResultEvent extends Event {
    *   The created query.
    */
   public function getSearchApiQuery() : QueryInterface {
-    return $this->search_api_query;
+    return $this->searchApiQuery;
   }
 
   /**
    * Retrieves the solarium result.
    *
-   * @return \Solarium\QueryType\Select\Result\Result
+   * @return \Solarium\QueryType\Select\Result\Result|\Solarium\QueryType\Stream\Result
    *   The solarium result.
    */
   public function getSolariumResult() {
-    return $this->solarium_result;
+    return $this->solariumResult;
   }
 
 }

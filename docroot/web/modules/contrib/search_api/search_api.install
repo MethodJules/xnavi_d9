@@ -8,10 +8,10 @@
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Component\Render\MarkupInterface;
 use Drupal\Core\Database\DatabaseException;
+use Drupal\Core\Entity\Sql\SqlContentEntityStorageSchema;
 use Drupal\Core\Link;
-use Drupal\search_api\Entity\Server;
 use Drupal\Core\Url;
-use Drupal\search_api\Entity\TaskStorageSchema;
+use Drupal\search_api\Entity\Server;
 
 /**
  * Implements hook_schema().
@@ -337,10 +337,8 @@ function search_api_update_8106() {
  * Add a unique index to the task entity type's storage.
  */
 function search_api_update_8107() {
-  $manager = \Drupal::entityDefinitionUpdateManager();
-  $entity_type = $manager->getEntityType('search_api_task');
-  $entity_type->setHandlerClass('storage_schema', TaskStorageSchema::class);
-  $manager->updateEntityType($entity_type);
+  // This function body was removed since it was out-dated.
+  // See search_api_update_8110().
 }
 
 /**
@@ -397,4 +395,24 @@ function search_api_update_8109(): MarkupInterface {
   }
 
   return t('Enabled "Track changes in referenced entities" on all existing search indexes.');
+}
+
+/**
+ * Remove the unique index from the task entity type's storage.
+ */
+function search_api_update_8110() {
+  $manager = \Drupal::entityDefinitionUpdateManager();
+  $entity_type = $manager->getEntityType('search_api_task');
+  // Apparently, getEntityType() can return NULL under some circumstances.
+  if (!$entity_type) {
+    return;
+  }
+  // Do not bother resetting the storage schema handler in case it was not set
+  // in the first place.
+  $handler = $entity_type->getHandlerClass('storage_schema');
+  if (in_array($handler, [SqlContentEntityStorageSchema::class, NULL], TRUE)) {
+    return;
+  }
+  $entity_type->setHandlerClass('storage_schema', SqlContentEntityStorageSchema::class);
+  $manager->updateEntityType($entity_type);
 }
