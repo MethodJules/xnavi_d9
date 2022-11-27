@@ -32,6 +32,8 @@
         "drupal/fullcalendar_view": "^5.1",
         "drupal/geocoder": "^3.20",
         "drupal/geofield": "^1.22",
+        "drupal/gin": "^3.0@beta",
+        "drupal/gin_toolbar": "^1.0@beta",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/leaflet": "^10.0",
         "drupal/paragraphs": "^1.12",
