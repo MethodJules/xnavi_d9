@@ -26,7 +26,7 @@ class SerializationTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'search_api',
     'search_api_test',
     'node',
@@ -37,7 +37,7 @@ class SerializationTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     $this->installSchema('search_api', ['search_api_item']);

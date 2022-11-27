@@ -5,8 +5,11 @@ views.style.leaflet_map:
   label: 'Leaflet map'
   mapping:
     data_source:
-      type: string
-      label: 'Data source'
+      type: sequence
+      label: 'Data sources'
+      sequence:
+        type: string
+        label: 'Data source'
     entity_source:
       type: string
       label: 'Entity source'
@@ -15,10 +18,27 @@ views.style.leaflet_map:
       label: 'Submit label for entity source'
     name_field:
       type: string
-      label: 'Name field'
-    description_field:
-      type: string
-      label: 'Description field'
+      label: 'Simple Tooltip'
+    leaflet_tooltip:
+      type: mapping
+      label: 'Tooltip Source'
+      mapping:
+        value:
+          type: string
+          label: 'Value'
+        options:
+          type: text
+          label: 'Tooltip Options'
+    leaflet_popup:
+      type: mapping
+      label: 'Popup Source'
+      mapping:
+        value:
+          type: string
+          label: 'Value'
+        options:
+          type: text
+          label: 'Popup Options'
     view_mode:
       type: string
       label: 'View mode'
@@ -37,22 +57,32 @@ views.style.leaflet_map:
     disable_wheel:
       type: boolean
       label: 'Disable wheel'
-    fullscreen_control:
-      type: boolean
-      label: 'Fulllscreen control'
     gesture_handling:
       type: boolean
       label: 'Gesture handling'
     reset_map:
       type: mapping
-      label: 'Reset map'
+      label: 'Reset Map View'
       mapping:
         control:
           type: boolean
           label: 'Control'
-        position:
-          type: string
-          label: 'Position'
+        options:
+          type: text
+          label: 'Options'
+    locate:
+      type: mapping
+      label: 'Locate User Position'
+      mapping:
+        control:
+          type: boolean
+          label: 'Control'
+        options:
+          type: text
+          label: 'Options'
+        automatic:
+          type: boolean
+          label: 'Automatically locate user current position'
     map_position:
       type: mapping
       label: 'Map position'
@@ -163,6 +193,19 @@ views.style.leaflet_map:
     leaflet_markercluster:
       type: mapping
       label: 'Leaflet Markercluster'
+      mapping:
+        control:
+          type: boolean
+          label: 'Control'
+        include_path:
+          type: boolean
+          label: 'Include Path'
+        options:
+          type: text
+          label: 'Options'
+    fullscreen:
+      type: mapping
+      label: 'Leaflet Fullscreen'
       mapping:
         control:
           type: boolean

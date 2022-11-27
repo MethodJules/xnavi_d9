@@ -25,7 +25,7 @@ class ViewsFieldTraitTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'field',
     'search_api',
     'search_api_test_example_content',
@@ -67,7 +67,7 @@ class ViewsFieldTraitTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     $this->installEntitySchema('entity_test_mulrev_changed');

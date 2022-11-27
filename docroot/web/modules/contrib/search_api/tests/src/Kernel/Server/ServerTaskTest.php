@@ -44,7 +44,7 @@ class ServerTaskTest extends KernelTestBase {
    *
    * @var string[]
    */
-  public static $modules = [
+  protected static $modules = [
     'user',
     'search_api',
     'search_api_test',
@@ -67,7 +67,7 @@ class ServerTaskTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     $this->installEntitySchema('user');

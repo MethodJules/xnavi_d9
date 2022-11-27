@@ -36,7 +36,7 @@ class TaskTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = [
+  protected static $modules = [
     'user',
     'search_api',
     'search_api_test',
@@ -60,7 +60,7 @@ class TaskTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     $this->installEntitySchema('search_api_task');

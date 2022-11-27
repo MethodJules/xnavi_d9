@@ -21,21 +21,19 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/address": "^1.9",
-        "drupal/better_exposed_filters": "^5.0",
+        "drupal/better_exposed_filters": "^6.0",
         "drupal/bootstrap4": "^2.1",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/default_content": "@alpha",
-        "drupal/devel": "^4.1",
-        "drupal/facets": "^1.8",
+        "drupal/devel": "^5.0",
+        "drupal/facets": "^2.0",
         "drupal/fullcalendar_view": "^5.1",
         "drupal/geocoder": "^3.20",
         "drupal/geofield": "^1.22",
-        "drupal/gin": "@alpha",
-        "drupal/gin_toolbar": "@beta",
-        "drupal/layout_paragraphs": "^1.0",
-        "drupal/leaflet": "^2.1",
+        "drupal/layout_paragraphs": "^2.0",
+        "drupal/leaflet": "^10.0",
         "drupal/paragraphs": "^1.12",
         "drupal/search_api": "^1.19",
         "drupal/search_api_solr": "^4.1",
@@ -53,7 +51,12 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true
+        }
     },
     "extra": {
         "drupal-scaffold": {
