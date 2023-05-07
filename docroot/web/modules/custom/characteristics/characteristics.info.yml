@@ -1,0 +1,6 @@
+name: x.Navi Characteristics Services
+description: Das Modul erweitert das User Management
+core: 8.x
+type: module
+core_version_requirement: ^8 || ^9
+package: x.Navi

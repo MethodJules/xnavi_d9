@@ -1,0 +1,6 @@
+<select class="form-select" aria-label="Choose Portal" onchange="goToPortal()">
+  <option selected>Bitte wählen Sie ein Portal</option>
+  {% for key, value in data %}
+    <option value="{{key}}">{{value}}</option>
+  {% endfor %}
+</select>

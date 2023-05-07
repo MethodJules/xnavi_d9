@@ -1,0 +1,6 @@
+name: x.Navi Portal Services
+description: Das Modul connected sich mit anderen Portalen
+core: 8.x
+type: module
+core_version_requirement: ^8 || ^9
+package: x.Navi

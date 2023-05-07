@@ -1,0 +1,13 @@
+chararcteristics.controller:
+  path: '/characteristics/controller'
+  defaults:
+    _controller: Drupal\characteristics\Controller\CharacteristicsController::start
+  requirements:
+    _permission: 'access content'
+
+chararcteristics.form:
+  path: '/characteristics/form'
+  defaults:
+    _form: Drupal\characteristics\Form\CharacteristicsForm
+  requirements:
+    _permission: 'access content'

@@ -2195,26 +2195,26 @@
         },
         {
             "name": "drupal/bootstrap4",
-            "version": "2.1.15",
+            "version": "2.1.18",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap4.git",
-                "reference": "2.1.15"
+                "reference": "2.1.18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap4-2.1.15.zip",
-                "reference": "2.1.15",
-                "shasum": "483abee391da096e1af748ca27b2dfd18b35241b"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap4-2.1.18.zip",
+                "reference": "2.1.18",
+                "shasum": "12372a0fa36bb895ec5e02233fab9582e4329dc9"
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^9.4"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "2.1.15",
-                    "datestamp": "1659076902",
+                    "version": "2.1.18",
+                    "datestamp": "1679973202",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2223,21 +2223,25 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0"
+                "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Janna M (jannakha)",
+                    "homepage": "https://www.drupal.org/u/jannakha",
+                    "role": "Maintainer"
+                },
                 {
                     "name": "Vladimir Roudakov (vladimiraus)",
                     "homepage": "https://www.drupal.org/u/vladimiraus",
                     "role": "Maintainer"
-                },
-                {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
                 }
             ],
             "description": "Master theme using Bootstrap 4: powerful front-end framework for faster and easier web development.",
             "homepage": "https://www.drupal.org/project/bootstrap4",
+            "keywords": [
+                "Drupal"
+            ],
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap4",
                 "issues": "https://www.drupal.org/project/issues/bootstrap4"
@@ -2245,16 +2249,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.4.8",
+            "version": "9.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a627d1b2a00f2cef0572e37b94dea298800541f4"
+                "reference": "d3902ea07a003b0c05a74c0d0055aa87a75bb60a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a627d1b2a00f2cef0572e37b94dea298800541f4",
-                "reference": "a627d1b2a00f2cef0572e37b94dea298800541f4",
+                "url": "https://api.github.com/repos/drupal/core/zipball/d3902ea07a003b0c05a74c0d0055aa87a75bb60a",
+                "reference": "d3902ea07a003b0c05a74c0d0055aa87a75bb60a",
                 "shasum": ""
             },
             "require": {
@@ -2406,22 +2410,22 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.4.8"
+                "source": "https://github.com/drupal/core/tree/9.4.10"
             },
-            "time": "2022-10-06T15:57:08+00:00"
+            "time": "2023-01-18T12:48:31+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.4.8",
+            "version": "9.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "5f37a9e4008b34e3e4f6bb34ce0b3f7e5ec8984f"
+                "reference": "08da8e59c6f1bd0b1a58d18f8addc0d937bbacc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/5f37a9e4008b34e3e4f6bb34ce0b3f7e5ec8984f",
-                "reference": "5f37a9e4008b34e3e4f6bb34ce0b3f7e5ec8984f",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/08da8e59c6f1bd0b1a58d18f8addc0d937bbacc7",
+                "reference": "08da8e59c6f1bd0b1a58d18f8addc0d937bbacc7",
                 "shasum": ""
             },
             "require": {
@@ -2456,13 +2460,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.4.8"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.5.9"
             },
-            "time": "2022-06-19T16:14:23+00:00"
+            "time": "2023-04-30T16:17:33+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.4.8",
+            "version": "9.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2497,22 +2501,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.5.0-beta2"
+                "source": "https://github.com/drupal/core-project-message/tree/9.5.9"
             },
             "time": "2022-02-24T17:40:53+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.4.8",
+            "version": "9.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "684cc844f7b729286f5d62f1ee4b20ab12586502"
+                "reference": "a17a908ec8aab9625ae8fb0dd4aa830dd8921ce2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/684cc844f7b729286f5d62f1ee4b20ab12586502",
-                "reference": "684cc844f7b729286f5d62f1ee4b20ab12586502",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a17a908ec8aab9625ae8fb0dd4aa830dd8921ce2",
+                "reference": "a17a908ec8aab9625ae8fb0dd4aa830dd8921ce2",
                 "shasum": ""
             },
             "require": {
@@ -2521,7 +2525,7 @@
                 "doctrine/annotations": "~1.13.2",
                 "doctrine/lexer": "~1.2.3",
                 "doctrine/reflection": "~1.2.3",
-                "drupal/core": "9.4.8",
+                "drupal/core": "9.4.10",
                 "egulias/email-validator": "~3.2",
                 "guzzlehttp/guzzle": "~6.5.8",
                 "guzzlehttp/promises": "~1.5.1",
@@ -2583,9 +2587,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.4.8"
+                "source": "https://github.com/drupal/core-recommended/tree/9.4.10"
             },
-            "time": "2022-10-06T15:57:08+00:00"
+            "time": "2023-01-18T12:48:31+00:00"
         },
         {
             "name": "drupal/default_content",
@@ -2666,21 +2670,22 @@
         },
         {
             "name": "drupal/devel",
-            "version": "5.0.2",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "5.0.2"
+                "reference": "5.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-5.0.2.zip",
-                "reference": "5.0.2",
-                "shasum": "9299d52d806897240fb5a57e66f12e09c4f00960"
+                "url": "https://ftp.drupal.org/files/projects/devel-5.1.1.zip",
+                "reference": "5.1.1",
+                "shasum": "d7423dfe9c2333508618975c37f3b63026adca50"
             },
             "require": {
-                "doctrine/common": "^2.7",
+                "doctrine/common": "^2.7 || ^3.4",
                 "drupal/core": "^9 || ^10",
+                "php": ">=7.4",
                 "symfony/var-dumper": "^4 || ^5 || ^6"
             },
             "conflict": {
@@ -2695,8 +2700,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.0.2",
-                    "datestamp": "1664317512",
+                    "version": "5.1.1",
+                    "datestamp": "1671644739",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2796,17 +2801,17 @@
         },
         {
             "name": "drupal/facets",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/facets.git",
-                "reference": "2.0.5"
+                "reference": "2.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets-2.0.5.zip",
-                "reference": "2.0.5",
-                "shasum": "8be11b5bca088212270603cd3f3e69185022e379"
+                "url": "https://ftp.drupal.org/files/projects/facets-2.0.6.zip",
+                "reference": "2.0.6",
+                "shasum": "e984e6ce69026c20d2049d4ec53748e67c5e70de"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10.0"
@@ -2815,9 +2820,9 @@
                 "drupal/search_api": "<1.14"
             },
             "require-dev": {
-                "drupal/jquery_ui_slider": "~1.1",
-                "drupal/jquery_ui_touch_punch": "~1.0",
-                "drupal/search_api": "^1.25||1.x-dev"
+                "drupal/jquery_ui_slider": "~2.0",
+                "drupal/jquery_ui_touch_punch": "~1.1",
+                "drupal/search_api": "^1.28||1.x-dev"
             },
             "suggest": {
                 "drupal/jquery_ui_slider": "Required for the 'Facets Range Widget' module to work",
@@ -2826,8 +2831,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.5",
-                    "datestamp": "1658315614",
+                    "version": "2.0.6",
+                    "datestamp": "1671207897",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2870,26 +2875,26 @@
         },
         {
             "name": "drupal/fullcalendar_view",
-            "version": "5.1.7",
+            "version": "5.1.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fullcalendar_view.git",
-                "reference": "5.1.7"
+                "reference": "5.1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fullcalendar_view-5.1.7.zip",
-                "reference": "5.1.7",
-                "shasum": "9f7647f64235682a23fa3fd58738fcb2786d8b4f"
+                "url": "https://ftp.drupal.org/files/projects/fullcalendar_view-5.1.12.zip",
+                "reference": "5.1.12",
+                "shasum": "663fd96dccf0d2403cceb797a13fc1f04df4b470"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.2.0 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.1.7",
-                    "datestamp": "1660091558",
+                    "version": "5.1.12",
+                    "datestamp": "1680506578",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2923,31 +2928,32 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "3.24.0",
+            "version": "3.34.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geocoder.git",
-                "reference": "8.x-3.24"
+                "reference": "8.x-3.34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.24.zip",
-                "reference": "8.x-3.24",
-                "shasum": "6674d4c3f8a840f6aef3bffbb7d8f15fc4dc6084"
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.34.zip",
+                "reference": "8.x-3.34",
+                "shasum": "6eb44d0b055f4239a4bd65f3fedef5829a761fce"
             },
             "require": {
                 "davedevelopment/stiphle": "^0.9.2",
                 "drupal/core": "^8.8 || ^9",
-                "php": ">=7.1.0",
+                "php": ">=7.3.0",
                 "php-http/guzzle6-adapter": "^1.1 || ^2.0",
                 "php-http/message": "^1.6",
                 "willdurand/geocoder": "^4.0"
             },
             "require-dev": {
                 "drupal/address": "*",
-                "drupal/coder": "^8.2",
                 "drupal/geocoder_field": "*",
                 "drupal/geofield": "*",
+                "geo6/geocoder-php-addok-provider": "^1.0",
+                "geo6/geocoder-php-bpost-provider": "^1.3.0",
                 "geo6/geocoder-php-geopunt-provider": "^1.0",
                 "geo6/geocoder-php-spw-provider": "^1.0",
                 "geocoder-php/arcgis-online-provider": "^4.0",
@@ -2962,6 +2968,7 @@
                 "geocoder-php/ip-info-db-provider": "^4.0",
                 "geocoder-php/mapbox-provider": "^0.1",
                 "geocoder-php/mapquest-provider": "^4.0",
+                "geocoder-php/maptiler-provider": "^1.0",
                 "geocoder-php/maxmind-provider": "^4.1",
                 "geocoder-php/nominatim-provider": "^5.0",
                 "geocoder-php/open-cage-provider": "^4.0",
@@ -2969,17 +2976,13 @@
                 "geocoder-php/pelias-provider": "^1.1",
                 "geocoder-php/photon-provider": "^0.1.0",
                 "geocoder-php/tomtom-provider": "^4.0",
-                "geocoder-php/yandex-provider": "^4.0",
-                "phpro/grumphp": "^0.12.1",
-                "phpunit/phpunit": "^5.7|^6.5",
-                "sensiolabs/security-checker": "^4.1",
-                "squizlabs/php_codesniffer": "^2.7"
+                "geocoder-php/yandex-provider": "^4.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.24",
-                    "datestamp": "1638225451",
+                    "version": "8.x-3.34",
+                    "datestamp": "1682585666",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3002,16 +3005,8 @@
                     "role": "Co-maintainer"
                 },
                 {
-                    "name": "Pol",
-                    "homepage": "https://www.drupal.org/user/47194"
-                },
-                {
-                    "name": "Simon Georges",
-                    "homepage": "https://www.drupal.org/user/172312"
-                },
-                {
-                    "name": "claudiu.cristea",
-                    "homepage": "https://www.drupal.org/user/56348"
+                    "name": "Dean Reilly",
+                    "homepage": "https://www.drupal.org/user/336031"
                 },
                 {
                     "name": "gregseb",
@@ -3034,11 +3029,19 @@
                     "homepage": "https://www.drupal.org/user/47098"
                 },
                 {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                },
+                {
+                    "name": "Simon Georges",
+                    "homepage": "https://www.drupal.org/user/172312"
+                },
+                {
                     "name": "vidhatanand",
                     "homepage": "https://www.drupal.org/user/585764"
                 }
             ],
-            "description": "A Drupal module and a services based API to perform Geocode & Reverse Geocode operations among GIS data and addresses types & formats.",
+            "description": "Module and services based API to perform Geocode & Reverse Geocode operations among GIS data and addresses types & formats.",
             "homepage": "https://drupal.org/project/geocoder",
             "support": {
                 "source": "https://git.drupalcode.org/project/geocoder",
@@ -3048,17 +3051,17 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.47.0",
+            "version": "1.53.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield.git",
-                "reference": "8.x-1.47"
+                "reference": "8.x-1.53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.47.zip",
-                "reference": "8.x-1.47",
-                "shasum": "6eb52dcf82e242beac46655df8ee8f4075d06cef"
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.53.zip",
+                "reference": "8.x-1.53",
+                "shasum": "b915c1374731f1f8c4ccfd81ea1c0ad0b1466c99"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10",
@@ -3067,8 +3070,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.47",
-                    "datestamp": "1668167741",
+                    "version": "8.x-1.53",
+                    "datestamp": "1682551435",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3511,20 +3514,20 @@
         },
         {
             "name": "drupal/layout_paragraphs",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/layout_paragraphs.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_paragraphs-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "5465148b28169f5560048d70e55d0d1941ff2e36"
+                "url": "https://ftp.drupal.org/files/projects/layout_paragraphs-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "5157a05120d81f0978093ddbdf92c3ead2e11010"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^9.1 || ^10",
                 "drupal/paragraphs": "^1.6"
             },
             "require-dev": {
@@ -3535,8 +3538,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1661260491",
+                    "version": "2.0.2",
+                    "datestamp": "1671393681",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3569,17 +3572,17 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "10.0.0",
+            "version": "10.0.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/leaflet.git",
-                "reference": "10.0.0"
+                "reference": "10.0.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet-10.0.0.zip",
-                "reference": "10.0.0",
-                "shasum": "93ccaf5ddbfa8dbd7114babf64e63847f28d9e63"
+                "url": "https://ftp.drupal.org/files/projects/leaflet-10.0.12.zip",
+                "reference": "10.0.12",
+                "shasum": "94612aff0e1bee28ad8d936393e30a223b0476e6"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -3588,8 +3591,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "10.0.0",
-                    "datestamp": "1669177848",
+                    "version": "10.0.12",
+                    "datestamp": "1681511192",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3785,17 +3788,17 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.28.0",
+            "version": "1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.28"
+                "reference": "8.x-1.29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.28.zip",
-                "reference": "8.x-1.28",
-                "shasum": "d3ae0bb3cf17c986d5e0c6edb87aee6580b6fc1e"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.29.zip",
+                "reference": "8.x-1.29",
+                "shasum": "4663abbcfe5dfc159ee0886fc6c437e998fc0653"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10.0"
@@ -3816,8 +3819,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.28",
-                    "datestamp": "1667814116",
+                    "version": "8.x-1.29",
+                    "datestamp": "1679910252",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4083,20 +4086,20 @@
         },
         {
             "name": "drupal/swiftmailer",
-            "version": "2.2.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/swiftmailer.git",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/swiftmailer-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "54269f7ceb6364e4fb953cf67b52b555d748d09c"
+                "url": "https://ftp.drupal.org/files/projects/swiftmailer-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "790c682ea8774b4e03200db2c2426966d3564820"
             },
             "require": {
-                "drupal/core": "^8.9.11 || ^9.0.10",
+                "drupal/core": "^8.9.11 || ^9.0.10 || ^10",
                 "drupal/mailsystem": "^4.1.0",
                 "egulias/email-validator": "^2.0||^3",
                 "html2text/html2text": "^4.0.1",
@@ -4107,8 +4110,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1639141915",
+                    "version": "8.x-2.4",
+                    "datestamp": "1673559953",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

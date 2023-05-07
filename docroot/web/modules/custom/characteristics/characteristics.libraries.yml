@@ -1,0 +1,5 @@
+card-flipper:
+  version: 1.x
+  css:
+    base:
+      css/card-flipper.css: {}
