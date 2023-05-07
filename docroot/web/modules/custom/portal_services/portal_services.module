@@ -1,0 +1,34 @@
+<?php
+
+/**
+* Implements hook_theme().
+*/
+
+function portal_services_theme($existing, $type, $theme, $path) {
+
+    /*
+        return [
+            'forum_display' => [
+                'variables' => ['forums' => NULL, 'topics' => NULL, 'parents' => NULL, 'tid' => NULL, 'sortby' => NULL, 'forum_per_page' => NULL],
+            ],
+            'forum_list' => [
+                'variables' => ['forums' => NULL, 'parents' => NULL, 'tid' => NULL],
+            ],
+            'forum_icon' => [
+                'variables' => ['new_posts' => NULL, 'num_posts' => 0, 'comment_mode' => 0, 'sticky' => 0],
+            ],
+            'status_report' => [
+                'render element' => 'requirements',
+                'file' => 'system.admin.inc',
+            ],
+        ];
+    */
+
+    return [
+        'portal_services' => [
+            'variables' => [
+                'data' => [],
+            ]
+        ]
+    ];
+}

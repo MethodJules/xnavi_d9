@@ -1,0 +1,6 @@
+portal-services:
+  version: 1.x
+  js:
+    js/portal-services.js: {}
+  dependencies:
+    - core/drupalSettings

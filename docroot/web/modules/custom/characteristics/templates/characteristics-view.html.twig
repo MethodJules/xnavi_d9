@@ -1,0 +1,27 @@
+<div class="row">
+{% for characteristic in data %}
+	<div class="col-sm-4">
+		
+		<div class="card card-flip h-100">
+			<div class="card-front text-white bg-dark">
+				<div class="card-body">
+					<img class="card-img-top" src="{{characteristic.image}}" alt="" />
+					<h3 class="card-title">{{characteristic.name}}</h3>
+					<p class="card-text">{{characteristic.aufgaben}}</p>
+
+				</div>
+			</div>
+			<div class="card-back bg-white">
+				<div class="card-body">
+					<h3 class="card-title">Hintergrund</h3>
+					<p class="card-text">{{characteristic.background}}</p>
+					<h3 class="card-title">Interessen</h3>
+					<p class="card-text">{{characteristic.interests}}</p>
+					<a href="#" class="btn btn-outline-secondary">Action</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	{% endfor %}
+</div>
