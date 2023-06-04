@@ -1,0 +1,6 @@
+name: x.Navi Key Management
+description: Provides a Key Management
+core: 8.x
+type: module
+core_version_requirement: ^8 || ^9
+package: x.Navi

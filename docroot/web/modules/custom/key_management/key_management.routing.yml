@@ -1,0 +1,12 @@
+key_management.restapi.endpoint:
+  path: '/key-management/{key}/{id}'
+  defaults:
+    _controller: 'key_management.restapi.requestEndpoint'
+    id: 0
+  methods: [GET, POST]
+  requirements:
+    _permission: 'access content'
+    key: \w+
+    id: \d+
+  options:
+    _maintenance_access: true

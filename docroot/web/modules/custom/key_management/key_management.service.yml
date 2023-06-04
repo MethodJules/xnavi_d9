@@ -1,0 +1,12 @@
+services:
+  logger.channel.key_management:
+    class: Drupal\Core\Logger\LoggerChannels
+    factory: logger.factory:get
+    argument: ['key-management']
+  plugin.manager.key_management.response_key:
+    class: Drupal\key_management\PluginSystem\ResponseKeyPluginManager
+    parent: default_plugin_manager
+    arguments: []
+  key_management.restapi:
+    class: Drupal\key_management\Service\RestApi
+    arguments: ['@logger.channel.key_management', '@plugin.manager.key_management.response_key', '@request_stack']
