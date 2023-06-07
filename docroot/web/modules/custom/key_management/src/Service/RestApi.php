@@ -6,6 +6,10 @@ use Drupal\Component\Plugin\PluginManagerInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Response;
+use Drupal\key_management\ResponseContent;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+
 
 class RestApi implements RestApiInterface {
     /**
@@ -67,7 +71,41 @@ class RestApi implements RestApiInterface {
             } else {
                 /* @var \Drupal\key_management\PluginSystem\ResponseKeyPluginInterface $plugin */
                 $plugin = new $pluginDefinition['class']($pluginDefinition, $this->request, $response);
+                try {
+                    $content = new ResponseContent(
+                        ResponseContent::RESPONSE_STATUS_SUCCESS,
+                        $plugin->getResponseData()
+                    );
+                    if (!empty($cookies = $plugin->getCookies())) {
+                        foreach ($cookies as $cookie) {
+                            $response->header->setCookie($cookie);
+                        }
+                    }
+                }
+                catch (NotFoundHttpException $e) {
+                    $content = new ResponseContent(
+                      ResponseContent::RESPONSE_STATUS_ERROR,
+                      'The requested resource cannot be found on this server.',
+                      404
+                    );
+                }
+                catch (\Exception $e) {
+                    $this->logger->error("Unexpected error: {$e->getCode()} - {$e->getMessage()}");
+                    $content = new ResponseContent(
+                      ResponseContent::RESPONSE_STATUS_ERROR,
+                      $e->getMessage(),
+                      ($e->getCode() !== 0 ? $e->getCode() : 500)
+                    );
+                }
             }
         }
+        catch (PluginNotFoundException $e) {
+            $this->logger->notice("Undefined endpoint: {$key}");
+            $content = new ResponseContent(
+              ResponseContent::RESPONSE_STATUS_ERROR,
+              "Unknown key: {$key}",
+              500
+            );
+          }
       }
 }
