@@ -2,7 +2,7 @@
 
 namespace Drupal\key_management\Service;
 
-class RestApiInterface {
+interface RestApiInterface {
    /**
    * Generates a JSONd output of the requested key.
    *

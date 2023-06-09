@@ -6,9 +6,9 @@ use Drupal\Component\Plugin\PluginManagerInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\HttpFoundation\Response;
 use Drupal\key_management\ResponseContent;
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 class RestApi implements RestApiInterface {
@@ -78,7 +78,7 @@ class RestApi implements RestApiInterface {
                     );
                     if (!empty($cookies = $plugin->getCookies())) {
                         foreach ($cookies as $cookie) {
-                            $response->header->setCookie($cookie);
+                            $response->headers->setCookie($cookie);
                         }
                     }
                 }
@@ -106,6 +106,17 @@ class RestApi implements RestApiInterface {
               "Unknown key: {$key}",
               500
             );
-          }
+        }
+
+        if (!$content->isError()) {
+            $content->updateContent($pluginDefinition['class']::postProcessResponse($content->getRawContent()));
+        }
+
+        $response->setData($content->getResponseContent());
+        if ($content->isError()) {
+            $response->setStatusCode($content->getResponseStatusCode());
+        }
+        $response->setEncodingOptions(static::JSON_OUTPUT_OPTIONS);
+        return $response;
       }
 }

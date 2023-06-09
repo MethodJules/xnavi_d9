@@ -2,7 +2,7 @@ services:
   logger.channel.key_management:
     class: Drupal\Core\Logger\LoggerChannels
     factory: logger.factory:get
-    argument: ['key-management']
+    arguments: ['key_management']
   plugin.manager.key_management.response_key:
     class: Drupal\key_management\PluginSystem\ResponseKeyPluginManager
     parent: default_plugin_manager
