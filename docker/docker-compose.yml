@@ -26,11 +26,24 @@ services:
     restart: always
   xnavi_d9_solr:
     image: solr:7.5
+    container_name: "${PROJECT_NAME}_solr"
     ports:
       - "8983:8983"
     volumes:
       - ./solr_xnavi_config:/opt/solr/solr_xnavi_config
       - xnavi_d9_core:/opt/solr/server/solr/core
+  xnavi_d9_phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - xnavi_d9_db
+    environment:
+      PMA_HOST: xnavi_d9_db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
 volumes:
   #xnavi_d9_db_data:
   xnavi_d9_core:
