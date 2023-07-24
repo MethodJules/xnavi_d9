@@ -3,7 +3,7 @@ key_management.restapi.endpoint:
   defaults:
     _controller: 'key_management.restapi:requestEndpoint'
     id: 0
-  methods: [GET, POST]
+  methods: [GET, POST, PATCH]
   requirements:
     _permission: 'access content'
     key: \w+
