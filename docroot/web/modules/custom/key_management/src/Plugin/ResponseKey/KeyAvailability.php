@@ -54,25 +54,28 @@ class KeyAvailability extends ResponseKeyBase {
                 $reservierungsdatum = $node->field_reservierungsdatum->value;
                 $rueckgabe_datum = $node->field_rueckgabe_datum->value;
                 $schluessel_id = $node->field_schluessel_referenz->value; //This is an entity reference.
+                foreach ($node->field_schluessel_referenz as $reference) {
+                    $schluessel_id = $reference->target_id;
+                }
                 $buchung_id = $node->getTitle();
                 $buchung_zustand = $node->field_buchungszustand->value;
 
                 //TODO:Frag Julien ob richtig und teste 
 
                 //Get the row of the key that has the submitted key id to get it's state.
-                $users_key = $this->get_schluessel_by_schluesselId($schluessel_id);
-                $schluessel_zustand = $users_key->field_schluessel_zustand;
+                $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+                $schluessel = $node_storage->load(intval($schluessel_id));
+                $schluessel_zustand = $schluessel->field_schluessel_zustand->value;
 
                 //Get the row of the box that has the submitted key id to get the box id.
-                $schluessel_kasten=$this->get_kasten_by_schluesselId($schluessel_id);
-                $kasten_id = $schluessel_kasten->;
+                $kasten_id=$this->get_kasten_by_schluesselId($schluessel_id);
 
                 $data[] = [
                     'UserID' => $user_id,
                     'Buchung_ID' => $buchung_id,
                     'Reservierungsdatum' => $reservierungsdatum,
                     'Rueckgabedatum' => $rueckgabe_datum,
-                    'Buchung_Zustand' => $buchung_zustand
+                    'Buchung_Zustand' => $buchung_zustand,
                     'SchluesselID' => $schluessel_id,
                     'Schluessel_Zustand' => $schluessel_zustand,
                     'Kasten_ID' => $kasten_id,
@@ -114,10 +117,10 @@ class KeyAvailability extends ResponseKeyBase {
     }
 
     //Get a specific key value
-    public function get_schluessel_by_schluesselId($schluessel_id) {
-        $query = \Drupal::entityQuery('schluessel_verwaltung')
-        //   ->condition('type', 'schluessel_verwaltung')
-          ->condition('field_schluessel_id', $schluessel_id);
+    public function get_schluessel_zustand_by_schluesselId($schluessel_id) {
+        $query = \Drupal::entityQuery('node')
+          ->condition('type', 'schluessel_verwaltung')
+          ->condition('nid', $schluessel_id);
         $result = $query->execute();
       
         //if not empty return first result 
@@ -125,9 +128,9 @@ class KeyAvailability extends ResponseKeyBase {
     }
 
     public function get_kasten_by_schluesselId($schluessel_id) {
-        $query = \Drupal::entityQuery('kasten')
-        //   ->condition('type', 'kasten')
-          ->condition('field_schluessel_id', $schluessel_id);
+        $query = \Drupal::entityQuery('node')
+          ->condition('type', 'kasten')
+          ->condition('field_schluessel_referenz', $schluessel_id);
         $result = $query->execute();
       
         //if not empty return first result 
