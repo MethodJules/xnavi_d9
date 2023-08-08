@@ -23,11 +23,13 @@ use Drupal\node\Entity\Node;
 
  class UpdateDoorstateBox extends ResponseKeyBase {
     public function getPluginResponse() {
-        $content = $this->currentRequest->getContent();
-        $data = json_decode($content, TRUE);
+        $request = json_decode($this->currentRequest->getContent());
+        $data["node_id"] = $request->node_id;
+        $data["tuerZustand"] = $request->tuerZustand;
+        $data["istBelegt"] = $request->istBelegt;
 
-        if (isset($data["kastenID"]) && isset($data["tuerZustand"]) && isset($data["istBelegt"])) {
-            $kastenID = $data["kastenID"];
+        if (isset($data["node_id"]) && isset($data["tuerZustand"]) && isset($data["istBelegt"])) {
+            $kastenID = $data["node_id"];
             $zustand = $data["tuerZustand"];
             $istBelegt = $data["istBelegt"];
 
@@ -41,14 +43,11 @@ use Drupal\node\Entity\Node;
 
                 // Save the updated node
                 $node->save();
-                return new JsonResponse(['message' => 'Record updated successfully.']);
-            }
-            else {
-                return new JsonResponse(['error' => 'Error loading node.']);
+                return ['message' => 'Record updated successfully.'];
             }
         } 
         else {
-            return new JsonResponse(['error' => 'Missing parameters.']);
+            return ['error' => 'Missing parameters.'];
         }
     }
     // Use this if needed
@@ -67,10 +66,10 @@ use Drupal\node\Entity\Node;
         return NULL;
     }*/
     
-    // public static function postProcessResponse(array $responsedata) {
-    //     $responsedata['timestamp'] = time();
-    //     return $responsedata;
-    // }        //I don't need this
+    public static function postProcessResponse(array $responsedata) {
+         $responsedata['timestamp'] = time();
+         return $responsedata;
+    }
 
     public function getCacheTags() {
         return [];
