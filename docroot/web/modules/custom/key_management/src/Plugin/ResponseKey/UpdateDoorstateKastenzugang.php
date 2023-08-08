@@ -44,13 +44,13 @@ class UpdateDoorstateKastenzugang extends ResponseKeyBase {
             // Get the node ID and tuer_zustand from the decoded JSON
             $node_id = $request->ID;
             $tuer_zustand = $request->IstZu;
-            if (!empty($node_id) && !empty(tuer_zustand)){
+            if (!empty($node_id) && $tuer_zustand === false){
                 // Call the updateNodeData method to update the node
                 $this->updateNodeData($node_id, $tuer_zustand);
                 return ['response' => 'Updated successfully'];
             }
             else if(!empty($node_id)){
-                $tuer_zustand='true';
+                $tuer_zustand = true;
                 $this->updateNodeData($node_id,$tuer_zustand);
                 return ['response' => 'Updated with constant tuer_zustand successfully'];
             }
@@ -61,10 +61,10 @@ class UpdateDoorstateKastenzugang extends ResponseKeyBase {
     }
 
     
-    // public static function postProcessResponse(array $responsedata) {
-    //     $responsedata['timestamp'] = time();
-    //     return $responsedata;
-    // }        //I don't need this
+    public static function postProcessResponse(array $responsedata) {
+         $responsedata['timestamp'] = time();
+         return $responsedata;
+    }
 
     public function getCacheTags() {
         return [];
