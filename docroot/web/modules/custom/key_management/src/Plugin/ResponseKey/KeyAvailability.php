@@ -68,8 +68,8 @@ class KeyAvailability extends ResponseKeyBase {
                 $schluessel_zustand = $schluessel->field_schluessel_zustand->value;
 
                 //Get the row of the box that has the submitted key id to get the box id.
-                $kasten_id=$this->get_kasten_by_schluesselId($schluessel_id);
-
+                $kasten_node_id=$this->get_kasten_by_schluesselId($schluessel_id);
+                $kasten_id = $this->get_kasten_id($kasten_node_id);
                 $data[] = [
                     'UserID' => $user_id,
                     'Buchung_ID' => $buchung_id,
@@ -78,7 +78,8 @@ class KeyAvailability extends ResponseKeyBase {
                     'Buchung_Zustand' => $buchung_zustand,
                     'SchluesselID' => $schluessel_id,
                     'Schluessel_Zustand' => $schluessel_zustand,
-                    'Kasten_ID' => $kasten_id,
+                    'Kasten_Node_ID' => $kasten_node_id,
+                    'KastenID' => $kasten_id,
                 ];
 
             }
@@ -135,6 +136,12 @@ class KeyAvailability extends ResponseKeyBase {
       
         //if not empty return first result 
         return !empty($result) ? reset($result) : NULL;
+    }
+
+    public function get_kasten_id($node_kasten_id) {
+        $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+        $node = $node_storage->load($node_kasten_id);
+        return $node->field_kasten_id->value;
     }
 
 
