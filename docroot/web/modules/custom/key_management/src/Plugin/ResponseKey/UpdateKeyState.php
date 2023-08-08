@@ -23,8 +23,9 @@ use Drupal\node\Entity\Node;
 
  class UpdateKeyState extends ResponseKeyBase {
     public function getPluginResponse() {
-        $content = $this->currentRequest->getContent();
-        $data = json_decode($content, TRUE);
+        $request = json_decode($this->currentRequest->getContent());
+        $data["SchluesselID"] = $request->SchluesselID;
+        $data["Schluessel_Zustand"] = $request->Schluessel_Zustand;
 
         if (isset($data["SchluesselID"]) && isset($data["Schluessel_Zustand"])) {
             $schluesselID = $data["SchluesselID"];
@@ -38,14 +39,11 @@ use Drupal\node\Entity\Node;
 
                 // Save the updated node
                 $node->save();
-                return new JsonResponse(['message' => 'Record updated successfully.']);
-            }
-            else {
-                return new JsonResponse(['error' => 'Error loading node.']);
+                return ['message' => 'Record updated successfully.'];
             }
         } 
         else {
-            return new JsonResponse(['error' => 'Missing parameters.']);
+            return ['error' => 'Missing parameters.'];
         }
     }
     // Use this if needed
@@ -64,10 +62,10 @@ use Drupal\node\Entity\Node;
         return NULL;
     }*/
     
-    // public static function postProcessResponse(array $responsedata) {
-    //     $responsedata['timestamp'] = time();
-    //     return $responsedata;
-    // }        //I don't need this
+    public static function postProcessResponse(array $responsedata) {
+         $responsedata['timestamp'] = time();
+         return $responsedata;
+    }
 
     public function getCacheTags() {
         return [];
