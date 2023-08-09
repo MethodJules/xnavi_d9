@@ -10,3 +10,11 @@ key_management.restapi.endpoint:
     id: \d+
   options:
     _maintenance_access: true
+
+key_management.create_reservation.multistepform:
+  path: '/key-management/create-reservation'
+  defaults:
+    _form: 'Drupal\key_management\Form\CreateReservationForm'
+    _title: 'Reservierung erstellen'
+  requirements:
+    _permission: 'access content'
