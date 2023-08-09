@@ -72,7 +72,7 @@ class KeyAvailability extends ResponseKeyBase {
                 $kasten_id = $this->get_kasten_id($kasten_node_id);
                 $data[] = [
                     'UserID' => $user_id,
-                    'Buchung_ID' => $buchung_id,
+                    'Buchung_ID' => $node_id,
                     'Reservierungsdatum' => $reservierungsdatum,
                     'Rueckgabedatum' => $rueckgabe_datum,
                     'Buchung_Zustand' => $buchung_zustand,
