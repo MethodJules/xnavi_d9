@@ -170,8 +170,8 @@ class CreateReservationForm extends FormBase {
         $node->save();
         $nid = $node->id();
 
-        \Drupal::messenger()->addMessage('Buchung mit wurde erstellt');
-        $form_state->setRedirect('entity.node.edit_form', ['node' => $nid]);
+        \Drupal::messenger()->addMessage('Buchung wurde erstellt');
+        // $form_state->setRedirect('entity.node.edit_form', ['node' => $nid]);
     }
 
 
